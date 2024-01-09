@@ -1,5 +1,5 @@
 "use client";
-import "@/styles/globals.css";
+import "@/styles/globals.scss";
 import { dinAlternate, inter, tungsten } from "@/styles/fonts";
 import { SessionProvider } from "next-auth/react";
 

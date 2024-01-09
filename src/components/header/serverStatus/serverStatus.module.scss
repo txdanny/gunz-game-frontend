@@ -1,0 +1,13 @@
+.server-status {
+  font-weight: bold;
+  font-family: var(--font-inter);
+  text-align: center;
+  padding: 0 28px;
+  font-size: 12px;
+  .title {
+    color: white;
+  }
+  .status {
+    color: var(--color-success);
+  }
+}

@@ -1,0 +1,218 @@
+.account-dropdown {
+  position: relative;
+  padding-left: 6px;
+  cursor: pointer;
+  .title-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: transparent;
+    transition: all 300ms;
+    padding-right: 14px;
+  }
+  .user-icon {
+    padding: 10px;
+    display: grid;
+    place-content: center;
+    svg {
+      width: 20px;
+      height: 20px;
+      path {
+        transition: all 300ms;
+      }
+    }
+  }
+  .title {
+    color: white;
+    font-family: var(--font-din-alternate);
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    width: 96px;
+    text-align: center;
+    transition: all 300ms;
+  }
+  .arrow-icon {
+    margin-left: 4px;
+    width: 12px;
+    height: 12px;
+    display: grid;
+    place-content: center;
+    transition: all 300ms;
+    .icon {
+      stroke: var(--color-primary-50);
+      transition: all 300ms;
+    }
+  }
+  &:hover {
+    .title-box {
+      background: #ffbe17;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset,
+        0px -1px 1px 0px rgba(255, 255, 255, 0.25) inset;
+    }
+    .title {
+      color: var(--color-dark);
+    }
+    .user-icon {
+      svg {
+        path {
+          fill: var(--color-dark);
+          transition: all 300ms;
+        }
+      }
+    }
+    .arrow-icon {
+      transform: rotate(180deg);
+      .icon {
+        stroke: var(--color-dark);
+      }
+    }
+    .list-box {
+      display: block;
+    }
+  }
+}
+
+.list-box {
+  padding: 12px;
+  position: absolute;
+  left: 50%;
+  top: 28px;
+  transform: translateX(-50%);
+  min-width: 100%;
+  cursor: default;
+  display: none;
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 12px;
+    padding: 12px;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid var(--color-primary-50);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    .log-in {
+      cursor: pointer;
+      width: 150px;
+      border-radius: 8px;
+      padding: 12px 0;
+      position: relative;
+      background: var(--color-primary-50);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset,
+        0px -1px 1px 0px rgba(255, 255, 255, 0.25) inset;
+      position: relative;
+      transition: all 200ms;
+      .log-in-bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        opacity: 0;
+        transition: all 200ms;
+        background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.2) 100%
+          ),
+          #ffbe17;
+      }
+      &:hover {
+        background: transparent;
+        .log-in-bg {
+          opacity: 1;
+        }
+      }
+    }
+    .log-out {
+      cursor: pointer;
+      width: 150px;
+      border-radius: 8px;
+      padding: 12px 0;
+      position: relative;
+      background: #ff3737;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset,
+        0px -1px 1px 0px rgba(255, 255, 255, 0.25) inset;
+      position: relative;
+      transition: all 200ms;
+      .log-out-bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        opacity: 0;
+        transition: all 200ms;
+        background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.2) 100%
+          ),
+          #ff3737;
+      }
+      &:hover {
+        background: transparent;
+        .log-out-bg {
+          opacity: 1;
+        }
+      }
+    }
+    .sign-up {
+      cursor: pointer;
+      width: 150px;
+      border-radius: 8px;
+      padding: 12px 0;
+      border-radius: 8px;
+      position: relative;
+      background: #282828;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset,
+        0px -1px 1px 0px rgba(255, 255, 255, 0.25) inset;
+      transition: all 200ms;
+      .sign-up-bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        opacity: 0;
+        transition: all 200ms;
+        background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.2) 100%
+          ),
+          #282828;
+      }
+      &:hover {
+        background: transparent;
+        .sign-up-bg {
+          opacity: 1;
+        }
+      }
+    }
+    .list-title {
+      color: #fff;
+      text-align: center;
+      font-family: var(--font-din-alternate);
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 19.2px;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+// Font Family
+$inter: var(--font-inter);
+$tungsten: var(--font-tungsten);
+$din: var(--font-din-alternate);
+
+:root {
+  /* Fonts Family */
+  
+  /* Colors */
+  --color-primary-50: #ffbe17;
+  --color-primary-100: #c8991b;
+  --color-primary-200: #382900;
+  --color-dark: #212121;
+  --color-success: #42ff00;
+
+  /* Drop Shadow */
+  --shadow-btn: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  /* Box Shadow */
+  --shadow-play-hover: 0px 0px 2.528px 0px #ffc93c, 0px 0px 5.055px 0px #ffc93c,
+    0px 0px 17.693px 0px #ffc93c, 0px 0px 35.386px 0px #ffc93c,
+    0px 0px 60.661px 0px #ffc93c, 0px 0px 106.157px 0px #ffc93c;
+  --shadow-dropdown: 4px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset,
+    0px -1px 1px 0px rgba(255, 255, 255, 0.25) inset;
+
+  /* Background */
+  --bg-drop-item: linear-gradient(
+    180deg,
+    rgba(255, 190, 23, 0.38) 0%,
+    rgba(255, 190, 23, 0.25) 100%
+  );
+}

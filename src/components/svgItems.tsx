@@ -3,9 +3,13 @@ import { FC } from "react";
 interface IconProps {
   color?: string;
   className?: string;
+  subClassName?: string;
 }
 
-export const ArrowDown: FC<IconProps> = ({ color, className }) => {
+export const ArrowDown: FC<IconProps> = ({
+  className = "",
+  subClassName = "",
+}) => {
   return (
     <svg
       width="9"
@@ -13,11 +17,11 @@ export const ArrowDown: FC<IconProps> = ({ color, className }) => {
       viewBox="0 0 9 6"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className ? className : ""}
+      className={className}
     >
       <path
         d="M1.85156 1.5L4.92849 4.5L8.00541 1.5"
-        stroke={color ? color : "#FFBE17"}
+        className={subClassName}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
