@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import MainPageLayout from "@/components/layout";
+import HeroBanner from "@/components/landing/heroBanner";
 
 export const metadata: Metadata = {
   title: "Home | GunZ Website",
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <MainPageLayout>
       <div className=""></div>
+      {/* <HeroBanner /> */}
     </MainPageLayout>
   );
 }

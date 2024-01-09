@@ -2,6 +2,7 @@
 import "@/styles/globals.scss";
 import { dinAlternate, inter, tungsten } from "@/styles/fonts";
 import { SessionProvider } from "next-auth/react";
+import { GameProvider } from "@/contexts/gameProvider";
 
 export default function RootLayout({
   children,
@@ -13,7 +14,9 @@ export default function RootLayout({
       <body
         className={`${tungsten.variable} ${dinAlternate.variable} ${inter.variable}`}
       >
-        <SessionProvider>{children}</SessionProvider>
+        <SessionProvider>
+          <GameProvider>{children}</GameProvider>
+        </SessionProvider>
       </body>
     </html>
   );

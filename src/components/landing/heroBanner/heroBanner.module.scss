@@ -1,0 +1,14 @@
+// ."h-screen min-h-[800px]"
+.hero-banner {
+  height: 100vh;
+  width: 100vw;
+  min-height: 836px;
+  .video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

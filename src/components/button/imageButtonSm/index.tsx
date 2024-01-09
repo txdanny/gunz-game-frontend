@@ -17,6 +17,7 @@ const ImageButtonSm: FC<ButtonProps> = ({
 }) => {
   return (
     <button
+      type="button"
       style={style}
       onClick={onClick}
       className={`${styles["image-button"]} ${className}`}
