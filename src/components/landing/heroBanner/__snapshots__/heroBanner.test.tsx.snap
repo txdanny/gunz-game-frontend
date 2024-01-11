@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeroBanner Component renders correctly 1`] = `
+<div>
+  <div
+    class="hero-banner"
+  >
+    <video
+      autoplay=""
+      class="video"
+      loop=""
+      playsinline=""
+    >
+      <source
+        src="/videos/landing-page-hero.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <div
+      class="hero-content"
+    >
+      <div
+        class="logo"
+      >
+        <img
+          alt="Effected Logo"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          sizes="100vw"
+          src="/_next/image?url=%2Fimages%2Flogo%40metal.png&w=3840&q=75"
+          srcset="/_next/image?url=%2Fimages%2Flogo%40metal.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Flogo%40metal.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Flogo%40metal.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Flogo%40metal.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Flogo%40metal.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Flogo%40metal.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Flogo%40metal.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Flogo%40metal.png&w=3840&q=75 3840w"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+      </div>
+      <h2
+        class="intro-text"
+      >
+        The most competitive 3rd-person shooter that will
+        <br />
+         test your skills and reflexes to the limit.
+      </h2>
+      <button
+        class="btn-download"
+      >
+        <div
+          class="img-back"
+        >
+          <img
+            alt=""
+            class="play-shadow"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            src="/images/button/download@back.svg"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
+        <div
+          class="img-front"
+        >
+          <img
+            alt=""
+            class="play-shadow"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            src="/images/button/download@front.svg"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
+        <div
+          class="text"
+        >
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/icons/windows.svg"
+            style="color: transparent;"
+            width="40"
+          />
+          download for free
+        </div>
+        <div
+          class="bg-shadow"
+        />
+      </button>
+      <button
+        class="btn-mobile"
+      >
+        <div
+          class="img-back"
+        >
+          <img
+            alt=""
+            class="play-shadow"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            src="/images/button/download-sm@back.svg"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
+        <div
+          class="img-front"
+        >
+          <img
+            alt=""
+            class="play-shadow"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            src="/images/button/download-sm@front.svg"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
+        <div
+          class="text"
+        >
+          play for free
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;

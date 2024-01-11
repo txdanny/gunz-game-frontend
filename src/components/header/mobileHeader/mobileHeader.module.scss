@@ -1,11 +1,6 @@
 .mobile-header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  min-height: 860px;
-  height: 100vh;
   display: none;
+  z-index: 99;
   @media (max-width: 1080px) {
     display: block;
   }

@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "./heroBanner.module.scss";
 import Image from "next/image";
+import DownloadButton from "./downloadButton";
 
 const HeroBanner: FC = () => {
   return (
@@ -12,6 +13,11 @@ const HeroBanner: FC = () => {
         <div className={styles["logo"]}>
           <Image src="/images/logo@metal.png" alt="Effected Logo" fill />
         </div>
+        <h2 className={styles["intro-text"]}>
+          The most competitive 3rd-person shooter that will
+          <br /> test your skills and reflexes to the limit.
+        </h2>
+        <DownloadButton />
       </div>
     </div>
   );

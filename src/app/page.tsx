@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <MainPageLayout>
       <div className=""></div>
-      {/* <HeroBanner /> */}
+      <HeroBanner />
     </MainPageLayout>
   );
 }

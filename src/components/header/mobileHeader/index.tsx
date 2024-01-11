@@ -17,7 +17,6 @@ const MobileHeader: FC = () => {
 
   return (
     <header className={styles["mobile-header"]}>
-      <div className={styles["banner"]}>bezel only</div>
       <div
         className={`${styles["header-content"]}`}
         data-testid="header-content"
