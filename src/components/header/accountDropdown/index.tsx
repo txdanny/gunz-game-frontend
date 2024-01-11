@@ -29,8 +29,8 @@ const AccountDropdown: FC = () => {
                   Log In
                   <Image
                     src={"/icons/login.svg"}
-                    width={16}
-                    height={16}
+                    width={17}
+                    height={17}
                     alt=""
                   />
                 </div>
@@ -41,8 +41,8 @@ const AccountDropdown: FC = () => {
                   Sign Up
                   <Image
                     src={"/icons/signup.svg"}
-                    width={16}
-                    height={16}
+                    width={17}
+                    height={17}
                     alt=""
                   />
                 </div>
@@ -60,8 +60,8 @@ const AccountDropdown: FC = () => {
                   Log Out
                   <Image
                     src={"/icons/logout.svg"}
-                    width={16}
-                    height={16}
+                    width={17}
+                    height={17}
                     alt=""
                   />
                 </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { FC, useState } from "react";
-import styles from "./MobileHeader.module.scss";
+import styles from "./mobileHeader.module.scss";
 import { NAV_LINKS_MOBILE } from "@/config";
 import TopBar from "./topBar";
 import ListGroup from "./listGroup";
@@ -37,8 +37,8 @@ const MobileHeader: FC = () => {
                   Log In
                   <Image
                     src={"/icons/login.svg"}
-                    width={16}
-                    height={16}
+                    width={17}
+                    height={17}
                     alt=""
                   />
                 </div>
