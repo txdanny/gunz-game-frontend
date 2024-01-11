@@ -1,13 +1,12 @@
 "use client";
 
 import { ArrowDown, UserIcon } from "@/components/svgItems";
-import { useSession } from "next-auth/react";
 import { FC } from "react";
 import styles from "./accountDropdown.module.scss";
 import Image from "next/image";
 
 const AccountDropdown: FC = () => {
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
 
   return (
     <div className={styles["account-dropdown"]}>
@@ -22,7 +21,8 @@ const AccountDropdown: FC = () => {
       </div>
       <div className={styles["list-box"]}>
         <ul className={styles["list"]}>
-          {!session?.user ? (
+          {/* {!session?.user ? ( */}
+          {true ? (
             <>
               <li className={styles["log-in"]}>
                 <div className={styles["list-title"]}>

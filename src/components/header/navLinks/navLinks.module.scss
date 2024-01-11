@@ -2,6 +2,9 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  @media (max-width: 1560px) {
+    gap: 8px;
+  }
 }
 
 .nav-item {
@@ -11,14 +14,21 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 4px 16px;
+    padding: 12px 16px;
     border-radius: 4px;
     transition: all 200ms;
     background-color: transparent;
+    @media (max-width: 1440px) {
+      padding: 12px 8px;
+    }
     .title {
       font-family: var(--font-din-alternate);
       font-size: 20px;
       color: white;
+      line-height: 1;
+      @media (max-width: 1440px) {
+        font-size: 16px;
+      }
     }
     .arrow-icon {
       display: grid;

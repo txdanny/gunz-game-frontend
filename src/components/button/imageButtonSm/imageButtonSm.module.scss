@@ -4,6 +4,9 @@
   height: 36px;
   margin-left: 28px;
   margin-right: 16px;
+  @media (max-width: 1440px) {
+    margin-left: 12px;
+  }
   .bg-shadow {
     width: 120px;
     height: 30px;

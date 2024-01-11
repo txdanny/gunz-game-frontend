@@ -11,4 +11,10 @@
     text-transform: capitalize;
     color: var(--color-success);
   }
+  @media (max-width: 1440px) {
+    padding: 0 16px;
+  }
+  @media (max-width: 1240px) {
+    padding: 0 0;
+  }
 }
