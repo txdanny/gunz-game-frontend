@@ -10,7 +10,7 @@ interface TopBarProps {
 
 const TopBar: FC<TopBarProps> = ({ opened, setOpened }) => {
   return (
-    <div className={styles["top-bar"]}>
+    <div className={styles["top-bar"]} data-testid="top-bar">
       {opened ? (
         <>
           <Image
@@ -22,6 +22,7 @@ const TopBar: FC<TopBarProps> = ({ opened, setOpened }) => {
           <button
             className={styles["btn-close"]}
             onClick={() => setOpened(false)}
+            data-testid="btn-close"
           >
             <CloseIcon />
           </button>
@@ -32,6 +33,7 @@ const TopBar: FC<TopBarProps> = ({ opened, setOpened }) => {
           <button
             className={styles["btn-open"]}
             onClick={() => setOpened(true)}
+            data-testid="btn-open"
           >
             <HamburgerIcon />
           </button>

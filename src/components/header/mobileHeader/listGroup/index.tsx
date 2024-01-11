@@ -1,4 +1,5 @@
 "use client";
+
 import { FC, useState } from "react";
 import styles from "./listGroup.module.scss";
 import { NavLink } from "@/utils/types";
@@ -13,7 +14,11 @@ const ListGroup: FC<GroupProps> = ({ list }) => {
   const [opened, setOpened] = useState<boolean>(false);
 
   return (
-    <div className={styles["list-group"]} onClick={() => setOpened(!opened)}>
+    <div
+      className={styles["list-group"]}
+      onClick={() => setOpened(!opened)}
+      data-testid="list-group"
+    >
       <div
         className={styles["title-bar"]}
         style={{
@@ -21,12 +26,15 @@ const ListGroup: FC<GroupProps> = ({ list }) => {
         }}
       >
         <p className={styles["title"]}>{list.title}</p>
-        <div className={styles["btn-arrow"]}>
-          <ArrowDown color="#FFBE17" />
-        </div>
+        {list.submenu && (
+          <div className={styles["btn-arrow"]}>
+            <ArrowDown color="#FFBE17" />
+          </div>
+        )}
       </div>
       <div
         className={styles["list-box"]}
+        data-testid="list-box"
         style={{
           height: opened ? "auto" : 0,
         }}

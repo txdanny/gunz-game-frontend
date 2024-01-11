@@ -18,7 +18,7 @@ const CoinBalance: FC = () => {
           className={styles["coin-icon"]}
           width={16}
           height={16}
-          alt=""
+          alt="coin icon"
         />
       </div>
     </div>

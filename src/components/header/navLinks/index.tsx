@@ -6,10 +6,10 @@ import { FC } from "react";
 
 const NavLinks: FC = () => {
   return (
-    <nav className="nav-links">
+    <nav className="nav-links" data-testid="nav-links">
       <ul className={styles["links"]}>
         {NAV_LINKS.map((menu, index) => (
-          <li key={`${index}-${menu.title}`}>
+          <li key={`${index}-${menu.title}`} data-testid="nav-menu-item">
             <div className={styles["nav-item"]}>
               <div className={styles["title-box"]}>
                 <div className={styles["title"]}>{menu.title}</div>
@@ -24,6 +24,7 @@ const NavLinks: FC = () => {
                       <li
                         key={`${index}-${subIndex}-${subMenuItem.title}`}
                         className={styles["list-item"]}
+                        data-testid="submenu-item"
                       >
                         <Link
                           href={subMenuItem.url}
