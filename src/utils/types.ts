@@ -8,3 +8,8 @@ export interface NavLink {
   url: string;
   submenu?: SubMenu[];
 }
+
+export interface Streaming {
+  channelID: string;
+  brand: string;
+}

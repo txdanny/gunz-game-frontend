@@ -1,6 +1,6 @@
 "use client";
 import "@/styles/globals.scss";
-import { dinAlternate, inter, tungsten } from "@/styles/fonts";
+import { dinAlternate, inter, montserrat, tungsten } from "@/styles/fonts";
 import { GameProvider } from "@/contexts/gameProvider";
 
 export default function RootLayout({
@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${tungsten.variable} ${dinAlternate.variable} ${inter.variable}`}
+        className={`${tungsten.variable} ${dinAlternate.variable} ${inter.variable} ${montserrat.variable}`}
       >
         <GameProvider>{children}</GameProvider>
       </body>

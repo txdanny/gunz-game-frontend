@@ -1,4 +1,4 @@
-import { NavLink } from "@/utils/types";
+import { NavLink, Streaming } from "@/utils/types";
 
 export const NAV_LINKS: NavLink[] = [
   {
@@ -123,5 +123,24 @@ export const NAV_LINKS_MOBILE: NavLink[] = [
       { title: "Tiktok", url: "#" },
       { title: "Twitch", url: "#" },
     ],
+  },
+];
+
+export const STREAMING_DATA: Streaming[] = [
+  {
+    channelID: "esl_dota2",
+    brand: "/icons/streaming-1.svg",
+  },
+  {
+    channelID: "fps_shaka",
+    brand: "/icons/streaming-2.svg",
+  },
+  {
+    channelID: "funnyskk",
+    brand: "/icons/streaming-3.svg",
+  },
+  {
+    channelID: "balcksasu",
+    brand: "/icons/streaming-4.svg",
   },
 ];

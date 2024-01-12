@@ -5,7 +5,7 @@ import DownloadButton from "./downloadButton";
 
 const HeroBanner: FC = () => {
   return (
-    <div className={styles["hero-banner"]}>
+    <section className={styles["hero-banner"]}>
       <video className={styles["video"]} autoPlay={true} playsInline loop muted>
         <source src="/videos/landing-page-hero.mp4" type="video/mp4" />
       </video>
@@ -19,7 +19,7 @@ const HeroBanner: FC = () => {
         </h2>
         <DownloadButton />
       </div>
-    </div>
+    </section>
   );
 };
 
