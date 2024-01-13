@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <MainPageLayout>
-      {/* <HeroBanner />
-      <StreamingNow /> */}
+      <HeroBanner />
+      <StreamingNow />
       <ZCoins />
     </MainPageLayout>
   );
