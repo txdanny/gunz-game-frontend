@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${tungsten.variable} ${dinAlternate.variable} ${inter.variable} ${montserrat.variable}`}
+        className={`${montserrat.variable} ${tungsten.variable} ${dinAlternate.variable} ${inter.variable}`}
       >
         <GameProvider>{children}</GameProvider>
       </body>

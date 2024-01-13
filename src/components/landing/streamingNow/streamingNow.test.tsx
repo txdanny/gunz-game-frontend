@@ -11,7 +11,7 @@ describe("StreamingNow Component", () => {
 
   it("renders the correct section title", () => {
     render(<StreamingNow />);
-    expect(screen.getByText("Streaming Guns Now")).toBeInTheDocument();
+    expect(screen.getByText("Streaming GUNZ Now")).toBeInTheDocument();
   });
 
   it("handles left button click correctly", () => {

@@ -1,0 +1,203 @@
+.zcoins {
+  position: relative;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  @media (max-width: 1080px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1250px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (max-width: 1280px) {
+    width: 100%;
+  }
+}
+
+.coin-info {
+  position: relative;
+  padding: 40px 40px 8px 40px;
+  background-color: #15171ebf;
+  width: 637px;
+  z-index: 1;
+  .title {
+    color: var(--color-primary-50);
+    text-align: center;
+    font-family: var(--font-tungsten);
+    font-size: 64px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    @media (max-width: 1280px) {
+      font-size: 32px;
+    }
+  }
+  @media (max-width: 1080px) {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px 0;
+  }
+  p.description {
+    margin-top: 8px;
+    color: white;
+    text-align: center;
+    font-family: var(--font-montserrat);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    span {
+      color: var(--color-primary-50);
+      &:nth-child(2) {
+        color: rgb(13, 10, 10);
+        font-weight: bold;
+      }
+    }
+    @media (max-width: 1080px) {
+      font-size: 12px;
+    }
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 56px;
+    @media (max-width: 1080px) {
+      margin-top: 16px;
+    }
+    .btn-buy {
+      position: relative;
+      width: 400px;
+      height: 100px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      color: #fffdf6;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-family: var(--font-tungsten);
+      font-size: 40px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: normal;
+      text-transform: uppercase;
+      background-image: url("/images/button/zcoin.png");
+      background-size: cover;
+
+      &::after {
+        content: "";
+        background-color: white;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: all 200ms;
+      }
+      &:hover {
+        &::after {
+          opacity: 0.2;
+        }
+      }
+
+      @media (max-width: 1080px) {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+    }
+    .btn-shop {
+      width: 240px;
+      height: 80px;
+      border-radius: 8px;
+      background: linear-gradient(180deg, #ffbe17 0%, #d89a00 100%);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      color: #fffdf6;
+      text-transform: uppercase;
+      text-align: center;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-family: var(--font-tungsten);
+      font-size: 40px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: normal;
+      position: relative;
+      &::after {
+        content: "";
+        background-color: white;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: all 200ms;
+      }
+      &:hover {
+        &::after {
+          opacity: 0.2;
+        }
+      }
+      &:first-child {
+        margin-right: 18px;
+      }
+      &:last-child {
+        margin-left: 18px;
+      }
+
+      @media (max-width: 1080px) {
+        width: 120px;
+        height: 40px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.button-label {
+  position: absolute;
+  z-index: 4;
+  color: #fffdf6;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-tungsten);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.coin {
+  position: relative;
+  width: calc(100% - 694px);
+  aspect-ratio: 1/1;
+  margin-left: 56px;
+  @media (max-width: 1080px) {
+    display: none;
+  }
+}
+
+.coin-sm {
+  position: relative;
+  width: 240px;
+  aspect-ratio: 1/1;
+  margin: 16px auto;
+  display: none;
+  @media (max-width: 1080px) {
+    display: block;
+  }
+}

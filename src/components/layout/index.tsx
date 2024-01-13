@@ -8,7 +8,7 @@ interface PageProps {
 const MainPageLayout: FC<PageProps> = ({ children }) => {
   return (
     <main className="main-page">
-      <Header />
+      {/* <Header /> */}
       {children}
     </main>
   );

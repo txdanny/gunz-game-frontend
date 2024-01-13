@@ -14,7 +14,7 @@ const CoinBalance: FC = () => {
       <div className={styles["balance"]}>
         {balance.toLocaleString()}
         <Image
-          src="/images/guns-coin@sm.png"
+          src="/images/gunz-coin@sm.png"
           className={styles["coin-icon"]}
           width={16}
           height={16}

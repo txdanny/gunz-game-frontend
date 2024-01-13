@@ -52,9 +52,14 @@ const StreamingNow: FC = () => {
       </div>
       <div className={styles["content"]}>
         <div className={styles["section-title"]}>
-          <span>Streaming Guns Now</span>
+          <div>Streaming GUNZ Now</div>
           <div className={styles["logo"]}>
-            <Image src={current.brand} fill className="object-contain" alt="Brand" />
+            <Image
+              src={current.brand}
+              fill
+              className="object-contain"
+              alt="Brand"
+            />
           </div>
         </div>
         <p className={styles["section-description"]}>
