@@ -11,7 +11,7 @@ const HeroBanner: FC = () => {
       </video>
       <div className={styles["hero-content"]}>
         <div className={styles["logo"]}>
-          <Image src="/images/logo@metal.png" alt="Effected Logo" fill />
+          <Image src="/images/3D.png" alt="Effected Logo" fill />
         </div>
         <h2 className={styles["intro-text"]}>
           The most competitive 3rd-person shooter that will

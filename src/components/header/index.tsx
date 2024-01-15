@@ -18,7 +18,7 @@ const Header: FC = () => {
             <Link href="/">
               <div className={styles["logo-box"]}>
                 <Image
-                  src={"/images/logo@sm.svg"}
+                  src={"/images/logo@new.png"}
                   fill
                   className={styles["logo-image"]}
                   alt="Logo"

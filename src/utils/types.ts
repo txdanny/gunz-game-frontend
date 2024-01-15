@@ -13,3 +13,13 @@ export interface Streaming {
   channelID: string;
   brand: string;
 }
+
+export interface Winner {
+  username: string;
+  pfp: string;
+  pts: number;
+  rank: {
+    type: string;
+    rank: 1 | 2 | 3;
+  };
+}
