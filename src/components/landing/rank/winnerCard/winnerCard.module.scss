@@ -78,7 +78,7 @@
     .order {
       color: #fff;
       text-align: center;
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      text-shadow: var(--shadow-box-1);
       font-family: var(--font-tungsten);
       font-size: 80px;
       font-style: normal;
@@ -130,10 +130,11 @@
       order: 2;
     }
     &:nth-child(2) {
-      order: 1;
-    }
-    &:nth-child(3) {
       order: 3;
     }
+    &:nth-child(3) {
+      order: 2;
+    }
+    padding: 13px 16px;
   }
 }

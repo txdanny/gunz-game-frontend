@@ -28,11 +28,11 @@
   justify-content: center;
   flex-direction: column;
   .logo {
-    height: 200px;
-    aspect-ratio: 808 / 233;
+    height: 180px;
+    aspect-ratio: 800 / 175;
     position: relative;
     @media (max-width: 1080px) {
-      height: 112px;
+      height: 60px;
     }
   }
   .intro-text {
@@ -74,7 +74,7 @@
     width: 700px;
     height: 120px;
     .img {
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      filter: drop-shadow(var(--shadow-box-1));
     }
   }
   .img-front {
@@ -86,7 +86,7 @@
     width: 691.5px;
     height: 120px;
     .img {
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      filter: drop-shadow(var(--shadow-box-1));
     }
   }
   .text {

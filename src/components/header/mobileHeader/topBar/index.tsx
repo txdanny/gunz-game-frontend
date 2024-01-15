@@ -14,9 +14,9 @@ const TopBar: FC<TopBarProps> = ({ opened, setOpened }) => {
       {opened ? (
         <>
           <Image
-            src="/images/logo@yellow.svg"
+            src="/images/logo@new.png"
             width={90}
-            height={27.4}
+            height={18.75}
             alt=""
           />
           <button
@@ -29,7 +29,7 @@ const TopBar: FC<TopBarProps> = ({ opened, setOpened }) => {
         </>
       ) : (
         <>
-          <Image src="/images/logo@sm.svg" width={90} height={27.4} alt="" />
+          <Image src="/images/logo@new.png" width={90} height={18.75} alt="" />
           <button
             className={styles["btn-open"]}
             onClick={() => setOpened(true)}
