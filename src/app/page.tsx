@@ -5,6 +5,7 @@ import StreamingNow from "@/components/landing/streamingNow";
 import ZCoins from "@/components/landing/zCoins";
 import Rank from "@/components/landing/rank";
 import GunzVip from "@/components/landing/gunzVip";
+import Community from "@/components/landing/community";
 
 export const metadata: Metadata = {
   title: "Home | GunZ Website",
@@ -19,6 +20,7 @@ export default function Home() {
       <ZCoins />
       <Rank />
       <GunzVip />
+      <Community />
     </MainPageLayout>
   );
 }

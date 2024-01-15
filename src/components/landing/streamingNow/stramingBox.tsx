@@ -58,11 +58,4 @@ const StreamingBox: React.FC<StreamingBoxProps> = ({
   return <div id={targetID}></div>;
 };
 
-StreamingBox.defaultProps = {
-  targetID: "twitch-embed",
-  width: 720,
-  height: 335,
-  channel: "k4sen",
-};
-
 export default StreamingBox;

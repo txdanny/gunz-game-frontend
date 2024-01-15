@@ -13,7 +13,7 @@
   }
   .btn-close {
     background-color: #3f3f3f;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-box-2);
   }
   .btn-open {
     background-color: var(--color-primary-50);

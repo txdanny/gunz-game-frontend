@@ -55,7 +55,7 @@
   &:hover {
     .title-box {
       background: #ffbe17;
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+      box-shadow: var(--shadow-box-2),
         0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset,
         0px -1px 1px 0px rgba(255, 255, 255, 0.25) inset;
     }
@@ -100,7 +100,7 @@
     background-color: white;
     border-radius: 12px;
     border: 1px solid var(--color-primary-50);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-box-2);
     .log-in {
       cursor: pointer;
       width: 150px;
@@ -108,7 +108,7 @@
       padding: 12px 0;
       position: relative;
       background: var(--color-primary-50);
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+      box-shadow: var(--shadow-box-2),
         0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset,
         0px -1px 1px 0px rgba(255, 255, 255, 0.25) inset;
       position: relative;
@@ -143,7 +143,7 @@
       padding: 12px 0;
       position: relative;
       background: #ff3737;
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+      box-shadow: var(--shadow-box-2),
         0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset,
         0px -1px 1px 0px rgba(255, 255, 255, 0.25) inset;
       position: relative;
@@ -179,7 +179,7 @@
       border-radius: 8px;
       position: relative;
       background: #282828;
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+      box-shadow: var(--shadow-box-2),
         0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset,
         0px -1px 1px 0px rgba(255, 255, 255, 0.25) inset;
       transition: all 200ms;

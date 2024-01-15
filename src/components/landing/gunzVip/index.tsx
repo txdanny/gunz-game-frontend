@@ -10,7 +10,6 @@ const GunzVip: FC = () => {
           src="/images/bg-gunzvip.jpg"
           className="object-cover"
           fill
-          data-testid="rank-bg"
           alt="GunZ V.I.P"
         />
       </div>

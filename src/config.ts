@@ -144,3 +144,26 @@ export const STREAMING_DATA: Streaming[] = [
     brand: "/icons/streaming-4.svg",
   },
 ];
+
+export const SOCIALS = [
+  {
+    name: "discord",
+    link: "#",
+  },
+  {
+    name: "twitter",
+    link: "#",
+  },
+  {
+    name: "youtube",
+    link: "#",
+  },
+  {
+    name: "instagram",
+    link: "#",
+  },
+  {
+    name: "tiktok",
+    link: "#",
+  },
+];
