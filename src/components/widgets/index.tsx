@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { SOCIALS } from "@/config";
 import Link from "next/link";
 import styles from "./widgets.module.scss";
@@ -16,6 +16,24 @@ export const SocialGroup: FC = () => {
           </div>
         </Link>
       ))}
+    </div>
+  );
+};
+
+interface PageBgProps {
+  src: string;
+  children?: ReactNode;
+}
+
+export const PageWithBg: FC<PageBgProps> = ({ src, children }) => {
+  return (
+    <div
+      className="page-bg"
+      style={{
+        backgroundImage: `url(${src})`,
+      }}
+    >
+      {children}
     </div>
   );
 };

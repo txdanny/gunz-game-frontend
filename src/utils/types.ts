@@ -14,6 +14,8 @@ export interface Streaming {
   brand: string;
 }
 
+export type RankingTabs = "clans" | "individuals" | "ladder" | "history";
+
 export interface Winner {
   username: string;
   pfp: string;
