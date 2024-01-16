@@ -61,7 +61,7 @@ const Rank: FC = () => {
           <WinnerCard
             username="Rakuzan"
             pfp="/images/temp/user-3.png"
-            pts={940}
+            pts={1240}
             rank={{ rank: 2, type: "clan" }}
           />
         </div>
