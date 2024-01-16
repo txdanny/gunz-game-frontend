@@ -6,7 +6,7 @@ import Image from "next/image";
 import StreamingBox from "./stramingBox";
 import { STREAMING_DATA } from "@/config";
 import { Streaming } from "@/utils/types";
-import { useWindowSize } from "react-use";
+import useWindowSize from "@/hooks/useWindowSize";
 
 const StreamingNow: FC = () => {
   const [current, setCurrent] = useState<Streaming>(STREAMING_DATA[0]);
