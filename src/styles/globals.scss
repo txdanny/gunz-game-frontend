@@ -19,6 +19,10 @@
   opacity: 1;
 }
 
+main {
+  min-height: 100vh;
+}
+
 button {
   border: none;
   background-color: transparent;
@@ -36,6 +40,8 @@ a {
 .main-page {
   min-height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .object-cover {

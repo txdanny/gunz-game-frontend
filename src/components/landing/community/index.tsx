@@ -2,7 +2,7 @@ import { FC } from "react";
 import styles from "./community.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import { SOCIALS } from "@/config";
+import { SocialGroup } from "@/components/widgets";
 
 const Community: FC = () => {
   return (
@@ -38,17 +38,7 @@ const Community: FC = () => {
             behind-the-scenes looks at the game&#39;s development are uploaded
             in this section.
           </p>
-          <div className={styles["socials"]}>
-            {SOCIALS.map((link, index) => (
-              <Link href={link.link} key={`${index}-${link.name}`}>
-                <div className={styles["social"]}>
-                  <div className={styles["icon"]}>
-                    <Image src={`/icons/${link.name}.svg`} alt="" fill />
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <SocialGroup />
           <div className={styles["action"]}>
             <Link href={"#"}>
               <div className={styles["btn-link"]}>news & articles</div>

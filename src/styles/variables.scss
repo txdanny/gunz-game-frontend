@@ -12,11 +12,13 @@ $montserrat: var(--font-montserrat);
   --color-primary-100: #c8991b;
   --color-primary-200: #382900;
   --color-secondary-50: #838383;
+  --color-secondary-100: #2e2e2e;
+  --color-secondary-200: #262626;
+  --color-secondary-300: #7b7b7b;
   --color-dark: #212121;
   --color-success: #42ff00;
 
   /* Drop Shadow */
-  --shadow-btn: var(--shadow-box-2);
   --shadow-box-1: 0px 4px 4px rgba(0, 0, 0, 0.25);
   --shadow-box-2: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 

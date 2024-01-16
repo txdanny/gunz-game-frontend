@@ -2,10 +2,12 @@
   position: relative;
   padding-top: 60px;
   height: 600px;
+  order: 4;
   @media (max-width: 1080px) {
     padding-top: 16px;
     padding-bottom: 0;
     height: auto;
+    order: 3;
   }
 }
 .info {

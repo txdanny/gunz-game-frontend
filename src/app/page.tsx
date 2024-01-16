@@ -18,8 +18,8 @@ export default function Home() {
       <HeroBanner />
       <StreamingNow />
       <ZCoins />
-      <Rank />
       <GunzVip />
+      <Rank />
       <Community />
     </MainPageLayout>
   );
