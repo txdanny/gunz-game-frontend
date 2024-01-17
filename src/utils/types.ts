@@ -25,3 +25,20 @@ export interface Winner {
     rank: 1 | 2 | 3;
   };
 }
+
+export interface Player {
+  id: string;
+  rank: number;
+  type: {
+    name: string;
+    rank?: number;
+  };
+  emblem: string; //pfp image
+  role: string;
+  playCount: {
+    win: number;
+    loss: number;
+    winRate: number;
+  };
+  points: number;
+}

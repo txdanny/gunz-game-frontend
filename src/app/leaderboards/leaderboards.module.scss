@@ -1,0 +1,17 @@
+.icon-large {
+  height: 707px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  margin-top: 200px;
+  margin-right: 50px;
+  margin-bottom: 120px;
+  margin-left: 50px;
+  background-color: var(--color-secondary-500);
+  box-shadow: var(--shadow-box-2);
+}
