@@ -11,10 +11,6 @@ import useWindowSize from "@/hooks/useWindowSize";
 const StreamingNow: FC = () => {
   const [current, setCurrent] = useState<Streaming>(STREAMING_DATA[0]);
 
-  const boxRef = useRef<HTMLDivElement>(null);
-  const { width } = useWindowSize();
-  const [boxSize, setBoxSize] = useState({ width: 720, height: 335 });
-
   const handleButtonClick = (direction: "left" | "right") => {
     const currentIndex = STREAMING_DATA.findIndex(
       (item) => item.channelID === current.channelID
@@ -30,14 +26,6 @@ const StreamingNow: FC = () => {
 
     setCurrent(STREAMING_DATA[newIndex]);
   };
-
-  useEffect(() => {
-    if (boxRef.current) {
-      const width = boxRef.current.offsetWidth;
-      const height = boxRef.current.offsetHeight;
-      setBoxSize({ width, height });
-    }
-  }, [width]);
 
   return (
     <section className={styles["streaming"]} data-testid="streaming-section">
@@ -71,18 +59,7 @@ const StreamingNow: FC = () => {
             on these streaming platforms!
           </span>
         </p>
-        <div
-          className={styles["video-box"]}
-          data-testid="video-box"
-          ref={boxRef}
-        >
-          <StreamingBox
-            targetID="video-box"
-            channel={current.channelID}
-            width={boxSize.width}
-            height={boxSize.height}
-          />
-        </div>
+        <StreamingBox targetID="video-box" channel={current.channelID} />
         <div className={styles["streamers"]}>
           view on <span>streamers</span>
         </div>

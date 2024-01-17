@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import styles from "./streamingNow.module.scss";
 
 interface StreamingBoxProps {
   targetID?: string;
-  width?: number;
-  height?: number;
   channel?: string;
 }
 
@@ -21,12 +20,7 @@ declare global {
 
 const EMBED_URL = "https://embed.twitch.tv/embed/v1.js";
 
-const StreamingBox: React.FC<StreamingBoxProps> = ({
-  targetID,
-  width,
-  height,
-  channel,
-}) => {
+const StreamingBox: React.FC<StreamingBoxProps> = ({ targetID, channel }) => {
   const embedRef = useRef<any>(null);
 
   useEffect(() => {
@@ -40,8 +34,8 @@ const StreamingBox: React.FC<StreamingBoxProps> = ({
 
       embedRef.current = new (window.Twitch as any).Embed(targetID, {
         layout: "video",
-        width,
-        height,
+        // width: boxSize.width,
+        // height: boxSize.height,
         channel,
       });
     });
@@ -53,9 +47,14 @@ const StreamingBox: React.FC<StreamingBoxProps> = ({
         embedRef.current.destroy();
       }
     };
-  }, [targetID, width, height, channel]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [targetID, channel]);
 
-  return <div id={targetID}></div>;
+  return (
+    <div className={styles["video-box"]}>
+      <div id={targetID}></div>
+    </div>
+  );
 };
 
 export default StreamingBox;

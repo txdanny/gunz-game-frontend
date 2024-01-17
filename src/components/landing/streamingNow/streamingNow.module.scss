@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   order: 2;
+  background-color: var(--color-secondary-200);
   .bg-image {
     position: absolute;
     width: 100%;
@@ -154,5 +155,16 @@
     font-size: 28px;
     letter-spacing: 0.56px;
     font-weight: bold;
+  }
+}
+
+.video-box {
+  iframe {
+    width: 720px;
+    height: 335px;
+    @media (max-width: 1080px) {
+      width: 282px;
+      height: 120px;
+    }
   }
 }
