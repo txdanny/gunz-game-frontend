@@ -128,11 +128,11 @@ export const NAV_LINKS_MOBILE: NavLink[] = [
 
 export const STREAMING_DATA: Streaming[] = [
   {
-    channelID: "esl_dota2",
+    channelID: "fps_shaka",
     brand: "/icons/streaming-1.svg",
   },
   {
-    channelID: "fps_shaka",
+    channelID: "esl_dota2",
     brand: "/icons/streaming-2.svg",
   },
   {
