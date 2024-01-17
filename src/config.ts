@@ -1,4 +1,8 @@
-import { NavLink, Streaming } from "@/utils/types";
+import { NavLink, Player, Streaming } from "@/utils/types";
+
+export const API_URL = process.env.NEXT_PUBLIC_API_URL
+  ? process.env.NEXT_PUBLIC_API_URL
+  : "";
 
 export const NAV_LINKS: NavLink[] = [
   {
@@ -165,5 +169,179 @@ export const SOCIALS = [
   {
     name: "tiktok",
     link: "#",
+  },
+];
+
+export const PLAYERS: Player[] = [
+  {
+    id: "",
+    rank: 1,
+    username: "Legend",
+    type: {
+      name: "clan",
+      rank: 1,
+    },
+    emblem: "/images/temp/user-1.png",
+    role: "CLCESAR",
+    playCount: {
+      win: 35,
+      loss: 4,
+      winRate: 89.74,
+    },
+    points: 1095,
+  },
+  {
+    id: "",
+    rank: 2,
+    username: "Rakuzan",
+    type: {
+      name: "clan",
+      rank: 1,
+    },
+    emblem: "/images/temp/user-2.png",
+    role: "dianabol",
+    playCount: {
+      win: 11,
+      loss: 4,
+      winRate: 85.54,
+    },
+    points: 1018,
+  },
+  {
+    id: "",
+    rank: 3,
+    username: "Armaxr",
+    type: {
+      name: "clan",
+      rank: 1,
+    },
+    emblem: "/images/temp/user-3.png",
+    role: "Leiker",
+    playCount: {
+      win: 10,
+      loss: 8,
+      winRate: 82.12,
+    },
+    points: 978,
+  },
+  {
+    id: "",
+    rank: 4,
+    username: "Cyxonse",
+    type: {
+      name: "clan",
+      rank: 1,
+    },
+    emblem: undefined,
+    role: "Cyzone",
+    playCount: {
+      win: 35,
+      loss: 4,
+      winRate: 89.74,
+    },
+    points: 962,
+  },
+  {
+    id: "",
+    rank: 5,
+    username: "Cyxonse",
+    type: {
+      name: "clan",
+      rank: 1,
+    },
+    emblem: undefined,
+    role: "Cyzone",
+    playCount: {
+      win: 35,
+      loss: 4,
+      winRate: 89.74,
+    },
+    points: 962,
+  },
+  {
+    id: "",
+    rank: 6,
+    username: "Cyxonse",
+    type: {
+      name: "clan",
+      rank: 1,
+    },
+    emblem: undefined,
+    role: "Cyzone",
+    playCount: {
+      win: 35,
+      loss: 4,
+      winRate: 89.74,
+    },
+    points: 962,
+  },
+
+  {
+    id: "",
+    rank: 7,
+    username: "Cyxonse",
+    type: {
+      name: "clan",
+      rank: 1,
+    },
+    emblem: undefined,
+    role: "Cyzone",
+    playCount: {
+      win: 35,
+      loss: 4,
+      winRate: 89.74,
+    },
+    points: 962,
+  },
+  {
+    id: "",
+    rank: 8,
+    username: "Cyxonse",
+    type: {
+      name: "clan",
+      rank: 1,
+    },
+    emblem: undefined,
+    role: "Cyzone",
+    playCount: {
+      win: 35,
+      loss: 4,
+      winRate: 89.74,
+    },
+    points: 962,
+  },
+  {
+    id: "",
+    rank: 9,
+    username: "Cyxonse",
+    type: {
+      name: "clan",
+      rank: 1,
+    },
+    emblem: undefined,
+    role: "Cyzone",
+    playCount: {
+      win: 35,
+      loss: 4,
+      winRate: 89.74,
+    },
+    points: 962,
+  },
+  {
+    id: "",
+    rank: 10,
+    username: "Cyxonse",
+    type: {
+      name: "clan",
+      rank: 1,
+    },
+    emblem: undefined,
+    role: "Cyzone",
+    playCount: {
+      win: 35,
+      loss: 4,
+      winRate: 89.74,
+    },
+    points: 962,
   },
 ];
