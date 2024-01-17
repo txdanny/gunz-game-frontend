@@ -24,7 +24,7 @@ const DownloadButton: FC = () => {
         </div>
 
         <div className={styles["text"]}>
-          <Image src={"/icons/windows.svg"} width={40} height={40} alt="" />
+          <Image src={"/icons/windows.svg"} width={30} height={30} alt="" />
           download for free
         </div>
         <div className={styles["bg-shadow"]} />

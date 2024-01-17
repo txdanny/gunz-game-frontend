@@ -1,6 +1,6 @@
 .rank {
   position: relative;
-  padding-top: 33px;
+  padding-top: 80px;
   padding-bottom: 40px;
   order: 5;
   @media (max-width: 1080px) {
@@ -42,7 +42,7 @@
   text-align: center;
   text-shadow: var(--shadow-box-1);
   font-family: var(--font-montserrat);
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -120,11 +120,12 @@
 }
 
 .cards-box {
-  width: 1320px;
+  width: 1080px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-right: auto;
   margin-left: auto;
+  gap: 40px;
   @media (max-width: 1340px) {
     width: calc(100% - 32px);
     margin-right: 16px;
@@ -132,5 +133,6 @@
   }
   @media (max-width: 1080px) {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 }

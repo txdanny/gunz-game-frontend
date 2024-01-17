@@ -14,8 +14,9 @@ const HeroBanner: FC = () => {
           <Image src="/images/3D.png" alt="Effected Logo" fill />
         </div>
         <h2 className={styles["intro-text"]}>
-          The most competitive 3rd-person shooter that will
-          <br /> test your skills and reflexes to the limit.
+          The most competitive 3rd-person shooter that will test you skills{" "}
+          <br />
+          and reflexes to the limit.
         </h2>
         <DownloadButton />
       </div>

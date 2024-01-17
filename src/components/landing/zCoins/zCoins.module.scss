@@ -1,7 +1,7 @@
 .zcoins {
   position: relative;
-  padding-top: 56px;
-  padding-bottom: 56px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   order: 3;
   @media (max-width: 1080px) {
     padding-top: 30px;
@@ -51,7 +51,7 @@
     color: white;
     text-align: center;
     font-family: var(--font-montserrat);
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -85,7 +85,7 @@
       color: #fffdf6;
       text-shadow: var(--shadow-box-1);
       font-family: var(--font-tungsten);
-      font-size: 40px;
+      font-size: 32px;
       font-style: normal;
       font-weight: bold;
       line-height: normal;
@@ -129,7 +129,7 @@
       text-align: center;
       text-shadow: var(--shadow-box-1);
       font-family: var(--font-tungsten);
-      font-size: 40px;
+      font-size: 32px;
       font-style: normal;
       font-weight: bold;
       line-height: normal;
@@ -185,7 +185,7 @@
 
 .coin {
   position: relative;
-  width: calc(100% - 694px);
+  width: calc(100% - 820px);
   aspect-ratio: 1/1;
   margin-left: 56px;
   @media (max-width: 1080px) {

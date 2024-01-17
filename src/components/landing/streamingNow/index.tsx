@@ -67,9 +67,8 @@ const StreamingNow: FC = () => {
           <br />
           Tune in, gear up, and witness{" "}
           <span>
-            GUNZ unfolding
-            <br />
-            in real-time on these streaming platforms!
+            GUNZ unfolding in real-time <br />
+            on these streaming platforms!
           </span>
         </p>
         <div
@@ -78,6 +77,7 @@ const StreamingNow: FC = () => {
           ref={boxRef}
         >
           <StreamingBox
+            targetID="video-box"
             channel={current.channelID}
             width={boxSize.width}
             height={boxSize.height}

@@ -29,7 +29,7 @@
   justify-content: center;
   flex-direction: column;
   .logo {
-    height: 180px;
+    height: 140px;
     aspect-ratio: 800 / 175;
     position: relative;
     @media (max-width: 1080px) {
@@ -39,14 +39,14 @@
   .intro-text {
     color: #fff;
     text-align: center;
-    text-shadow: 0px 3px 4px #000;
+    text-shadow: var(--shadow-box-1);
     font-family: var(--font-tungsten);
-    font-size: 48px;
+    font-size: 36px;
     font-style: normal;
     font-weight: medium;
     line-height: normal;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
     @media (max-width: 1080px) {
       font-size: 24px;
       margin-top: 0;
@@ -56,8 +56,8 @@
 }
 
 .btn-download {
-  width: 700px;
-  height: 120px;
+  width: 450px;
+  aspect-ratio: 700 / 120;
   position: relative;
   margin-top: 20px;
   display: flex;
@@ -72,8 +72,8 @@
     z-index: 1;
     left: 0;
     top: 0;
-    width: 700px;
-    height: 120px;
+    height: 80px;
+    aspect-ratio: 700 / 120;
     .img {
       filter: drop-shadow(var(--shadow-box-1));
     }
@@ -84,8 +84,8 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 691.5px;
-    height: 120px;
+    height: 80px;
+    aspect-ratio: 691.5 / 120;
     .img {
       filter: drop-shadow(var(--shadow-box-1));
     }
@@ -94,12 +94,12 @@
     position: relative;
     display: flex;
     align-items: center;
-    gap: 55px;
+    gap: 25px;
     text-transform: uppercase;
     color: #382900;
     text-align: center;
     font-family: var(--font-tungsten);
-    font-size: 50px;
+    font-size: 36px;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
@@ -111,8 +111,8 @@
     position: absolute;
     transition: all 200ms;
     z-index: 0;
-    width: 600px;
-    height: 80px;
+    width: 300px;
+    height: 40px;
     box-shadow: var(--shadow-play-hover);
     background-color: var(--color-primary-50);
     opacity: 0;
