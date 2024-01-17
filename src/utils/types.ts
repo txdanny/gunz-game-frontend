@@ -9,6 +9,13 @@ export interface NavLink {
   submenu?: SubMenu[];
 }
 
+export type Rank = {
+  1: string;
+  2: string;
+  3: string;
+  [key: number]: string; // Add this line
+};
+
 export interface Streaming {
   channelID: string;
   brand: string;
@@ -29,11 +36,12 @@ export interface Winner {
 export interface Player {
   id: string;
   rank: number;
+  username: string;
   type: {
     name: string;
     rank?: number;
   };
-  emblem: string; //pfp image
+  emblem: string | undefined | null; //pfp image
   role: string;
   playCount: {
     win: number;

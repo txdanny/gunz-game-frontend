@@ -15,7 +15,12 @@ export default function Ranking() {
     <MainPageLayout>
       <PageWithBg src="/images/bg-ranking.jpg">
         <div className={styles["icon-large"]}>
-          <Image src="/images/ranking-top.png" fill alt="" />
+          <Image
+            src="/images/ranking-top.png"
+            className="object-contain"
+            fill
+            alt=""
+          />
         </div>
         <div className={styles["container"]}>
           <RankTable />
