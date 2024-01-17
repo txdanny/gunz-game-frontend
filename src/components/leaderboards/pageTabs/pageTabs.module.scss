@@ -1,0 +1,37 @@
+.pagetabs {
+  background-color: var(--color-secondary-100);
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.content {
+  display: flex;
+}
+
+.tab-content {
+  display: flex;
+
+  .tab {
+    background-color: var(--color-secondary-400);
+    display: flex;
+    color: white;
+    padding: 8px 65px;
+    text-align: center;
+    font-family: var(--font-din-alternate);
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+    .active {
+      color: black;
+      background-color: var(--color-primary-50);
+    }
+  }
+}
