@@ -34,8 +34,6 @@ const StreamingBox: React.FC<StreamingBoxProps> = ({ targetID, channel }) => {
 
       embedRef.current = new (window.Twitch as any).Embed(targetID, {
         layout: "video",
-        // width: boxSize.width,
-        // height: boxSize.height,
         channel,
       });
     });
@@ -47,7 +45,6 @@ const StreamingBox: React.FC<StreamingBoxProps> = ({ targetID, channel }) => {
         embedRef.current.destroy();
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [targetID, channel]);
 
   return (
