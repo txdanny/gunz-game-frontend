@@ -11,6 +11,7 @@
 
 .content {
   display: flex;
+  background-color: var(--color-secondary-400);
 }
 
 .tab-content {
@@ -29,9 +30,26 @@
     line-height: normal;
     text-transform: uppercase;
     cursor: pointer;
-    .active {
-      color: black;
-      background-color: var(--color-primary-50);
-    }
   }
+  .tab-active {
+    color: black;
+    display: flex;
+    padding: 8px 65px;
+    text-align: center;
+    font-family: var(--font-din-alternate);
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: var(--color-primary-50);
+  }
+  .lefttab-svg {
+    transform: scale(-1, 1);
+  }
+}
+
+.rotate-180 {
+  rotate: 180deg;
 }

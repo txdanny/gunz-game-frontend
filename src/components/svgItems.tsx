@@ -86,32 +86,32 @@ export const CloseIcon: FC<IconProps> = () => {
   );
 };
 
-export const LeaderBoardTabIcon: FC<IconProps> = () => {
+export const LeaderBoardTabIcon: FC<IconProps> = ({ color }) => {
   return (
     <svg
-      width="19"
+      width="26"
       height="53"
-      viewBox="0 0 19 53"
+      viewBox="0 0 26 53"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g filter="url(#filter0_d_1_273)">
+      <g filter="url(#filter0_d_3_1496)">
         <path
-          d="M18.5 53L0.500003 -1.57361e-06L0.499998 53L18.5 53Z"
-          fill="#474747"
+          d="M18 53L2.72606e-06 -1.57361e-06L-1.90735e-06 53L18 53Z"
+          fill={color}
         />
       </g>
       <defs>
         <filter
-          id="filter0_d_1_273"
-          x="0.5"
+          id="filter0_d_3_1496"
+          x="0"
           y="-4"
           width="26"
           height="61"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -128,12 +128,12 @@ export const LeaderBoardTabIcon: FC<IconProps> = () => {
           <feBlend
             mode="normal"
             in2="BackgroundImageFix"
-            result="effect1_dropShadow_1_273"
+            result="effect1_dropShadow_3_1496"
           />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_dropShadow_1_273"
+            in2="effect1_dropShadow_3_1496"
             result="shape"
           />
         </filter>
@@ -142,39 +142,36 @@ export const LeaderBoardTabIcon: FC<IconProps> = () => {
   );
 };
 
-export const LeaderBoardLeftTabIcon: FC<IconProps> = () => {
+export const LeaderBoardLeftTabIcon: FC<IconProps> = ({ color }) => {
   return (
     <svg
-      width="19"
+      width="26"
       height="53"
-      viewBox="0 0 19 53"
+      viewBox="0 0 26 53"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g filter="url(#filter0_d_1_273)">
-        <path
-          d="M18.5 53L0.500003 -1.57361e-06L0.499998 53L18.5 53Z"
-          fill="#474747"
-        />
+      <g filter="url(#filter0_d_8_2019)">
+        <path d="M8.5 53L26.5 -1.57361e-06L26.5 53L8.5 53Z" fill={color} />
       </g>
       <defs>
         <filter
-          id="filter0_d_1_273"
+          id="filter0_d_8_2019"
           x="0.5"
           y="-4"
           width="26"
-          height="61"
+          height="53"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
             result="hardAlpha"
           />
-          <feOffset dx="4" />
+          <feOffset dx="-4" />
           <feGaussianBlur stdDeviation="2" />
           <feComposite in2="hardAlpha" operator="out" />
           <feColorMatrix
@@ -184,12 +181,12 @@ export const LeaderBoardLeftTabIcon: FC<IconProps> = () => {
           <feBlend
             mode="normal"
             in2="BackgroundImageFix"
-            result="effect1_dropShadow_1_273"
+            result="effect1_dropShadow_8_2019"
           />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_dropShadow_1_273"
+            in2="effect1_dropShadow_8_2019"
             result="shape"
           />
         </filter>
