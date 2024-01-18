@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import axios, { AxiosRequestConfig } from "axios";
 import axiosRetry from "axios-retry";
-import { Player } from "@/utils/types";
-import { API_URL, PLAYERS } from "@/config";
+import { IndividualsPlayer, Player } from "@/utils/types";
+import { API_URL, INDIVIDUALPLAYERS, PLAYERS } from "@/config";
 
 // Apply axios-retry globally
 axiosRetry(axios, { retries: 3, retryDelay: axiosRetry.exponentialDelay });
@@ -13,12 +13,16 @@ export const usePlayerData = (
   config?: AxiosRequestConfig
 ): {
   players: Player[] | null;
+  individualplayers: IndividualsPlayer[] | null;
   loadMore: () => void;
   loading: boolean;
   error: string | null;
 } => {
   const endpoint = API_URL + "/user/ranking";
   const [players, setPlayers] = useState<Player[] | null>(null);
+  const [individualplayers, setIndividualPlayers] = useState<
+    IndividualsPlayer[] | null
+  >(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -42,6 +46,9 @@ export const usePlayerData = (
 
   return {
     players: players ? players : PLAYERS,
+    individualplayers: individualplayers
+      ? individualplayers
+      : INDIVIDUALPLAYERS,
     loadMore,
     loading,
     error,

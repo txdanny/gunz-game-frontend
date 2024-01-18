@@ -8,6 +8,9 @@ import PageTabs from "@/components/leaderboards/pageTabs";
 import RankHeader from "@/components/leaderboards/rankHeader";
 import CompetiveRank from "@/components/leaderboards/competiveRank";
 import SearchBar from "@/components/leaderboards/searchBar";
+import MobileTopBar from "@/components/leaderboards/mobileTopBar";
+import MobileTopBanner from "@/components/leaderboards/mobileTopBanner";
+import MobileRankTable from "@/components/leaderboards/mobileRankTable";
 
 export const metadata: Metadata = {
   title: "Ranking | GunZ Website",
@@ -28,10 +31,13 @@ export default function Ranking() {
         </div>
         <div className={styles["container"]}>
           <PageTabs />
+          <MobileTopBar />
+          <MobileTopBanner />
           <RankHeader />
           <CompetiveRank />
           <SearchBar />
           <RankTable />
+          <MobileRankTable />
         </div>
       </PageWithBg>
     </MainPageLayout>

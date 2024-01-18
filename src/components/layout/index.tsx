@@ -11,7 +11,7 @@ const MainPageLayout: FC<PageProps> = ({ children }) => {
     <main className="main-page">
       <Header />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 };

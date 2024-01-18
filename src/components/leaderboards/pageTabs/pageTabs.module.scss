@@ -1,16 +1,10 @@
 .pagetabs {
   background-color: var(--color-secondary-400);
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
   gap: 10px;
   align-self: stretch;
   @media (max-width: 1080px) {
     display: none;
   }
-}
-
-.content {
-  display: flex;
-  background-color: var(--color-secondary-400);
 }

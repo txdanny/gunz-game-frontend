@@ -13,6 +13,14 @@
   flex-direction: column;
   cursor: pointer;
 
+  @media (max-width: 1440px) {
+    width: 140px;
+  }
+
+  @media (max-width: 425px) {
+    width: 100px;
+  }
+
   .title {
     color: rgba(255, 255, 255, 0.5);
     text-align: center;
