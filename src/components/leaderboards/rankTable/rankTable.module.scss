@@ -1,5 +1,8 @@
 .rank-table {
   padding: 40px;
+  @media (max-width: 1080px) {
+    display: none;
+  }
 }
 
 .bg-gold {

@@ -1,11 +1,13 @@
 .searchbar {
   display: flex;
-  height: 82px;
   justify-content: center;
   align-items: center;
   margin-top: 64px;
   gap: 40px;
   align-self: stretch;
+  @media (max-width: 1080px) {
+    flex-direction: column-reverse;
+  }
 
   .input-group {
     display: flex;

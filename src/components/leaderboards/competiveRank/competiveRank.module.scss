@@ -4,6 +4,9 @@
   justify-content: center;
   gap: 64px;
   margin-top: 40px;
+  @media (max-width: 1080px) {
+    display: none;
+  }
 
   .pfp-box {
     width: 200px;
