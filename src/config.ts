@@ -1,4 +1,4 @@
-import { NavLink, Player, Streaming } from "@/utils/types";
+import { NavLink, Player, Streaming, History } from "@/utils/types";
 
 export const API_URL = process.env.NEXT_PUBLIC_API_URL
   ? process.env.NEXT_PUBLIC_API_URL
@@ -198,6 +198,8 @@ export const LADDERTABLETDS = [
   "Win Rate",
   "Points",
 ];
+
+export const HISTORYTABLETDS = ["Date", "Map", "Winners", "Losers", "Points"];
 
 export const PLAYERS: Player[] = [
   {
@@ -410,5 +412,35 @@ export const PLAYERS: Player[] = [
       deaths: 22019,
     },
     points: 962,
+  },
+];
+
+export const HISTORYS: History[] = [
+  {
+    id: "",
+    date: "2023-08-12 (4:30 PM EST)",
+    map: "Factory",
+    winners: ["fright"],
+    firstPoints: 6,
+    losers: "King_WarZ",
+    secondPoints: 5,
+  },
+  {
+    id: "",
+    date: "2023-08-12 (4:02 PM EST)",
+    map: "Prison II",
+    winners: ["snuwfersucks"],
+    firstPoints: 6,
+    losers: "Mishandelaar",
+    secondPoints: 5,
+  },
+  {
+    id: "",
+    date: "2023-08-12 (4:02 PM EST)",
+    map: "Prison II",
+    winners: ["snuwfersucks"],
+    firstPoints: 6,
+    losers: "Mishandelaar",
+    secondPoints: 5,
   },
 ];
