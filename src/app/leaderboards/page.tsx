@@ -5,6 +5,9 @@ import RankTable from "@/components/leaderboards/rankTable";
 import Image from "next/image";
 import styles from "./leaderboards.module.scss";
 import PageTabs from "@/components/leaderboards/pageTabs";
+import RankHeader from "@/components/leaderboards/rankHeader";
+import CompetiveRank from "@/components/leaderboards/competiveRank";
+import SearchBar from "@/components/leaderboards/searchBar";
 
 export const metadata: Metadata = {
   title: "Ranking | GunZ Website",
@@ -25,6 +28,9 @@ export default function Ranking() {
         </div>
         <div className={styles["container"]}>
           <PageTabs />
+          <RankHeader />
+          <CompetiveRank />
+          <SearchBar />
           <RankTable />
         </div>
       </PageWithBg>

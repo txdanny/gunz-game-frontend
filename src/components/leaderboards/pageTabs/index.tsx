@@ -1,11 +1,9 @@
 "use client";
 import { FC } from "react";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import styles from "./pageTabs.module.scss";
-import {
-  LeaderBoardLeftTabIcon,
-  LeaderBoardTabIcon,
-} from "@/components/svgItems";
+
+import PageTabButton from "@/components/button/pageTabButton";
 
 interface PageTabsProps {}
 
@@ -21,60 +19,44 @@ const PageTabs: FC<PageTabsProps> = () => {
   return (
     <div className={styles.pagetabs}>
       <div className={styles.content}>
-        <TabContent
+        <PageTabButton
           handleTabClick={handleTabClick}
           tabName="clains"
           tabText="clains"
-          active={tabParam === "clains"}
+          active={tabParam === "clains" || tabParam == undefined}
+          rightDisableActiveState={false}
+          leftDisableActiveState={tabParam !== "individuals"}
         />
-        <TabContent
+        <PageTabButton
           handleTabClick={handleTabClick}
           tabName="individuals"
           tabText="individuals"
           active={tabParam === "individuals"}
+          rightDisableActiveState={tabParam === "clains"}
+          leftDisableActiveState={
+            tabParam !== "clains" || tabParam == undefined
+          }
         />
-        <TabContent
+        <PageTabButton
           handleTabClick={handleTabClick}
           tabName="ladder"
           tabText="ladder"
           active={tabParam === "ladder"}
+          rightDisableActiveState={tabParam !== "history"}
+          leftDisableActiveState={
+            (tabParam !== "individuals" && tabParam !== "clains") ||
+            (tabParam !== "individuals" && tabParam === undefined)
+          }
         />
-        <TabContent
+        <PageTabButton
           handleTabClick={handleTabClick}
           tabName="history"
           tabText="history"
           active={tabParam === "history"}
+          rightDisableActiveState={true}
+          leftDisableActiveState={tabParam == "!clains"}
         />
       </div>
-    </div>
-  );
-};
-
-interface TabContentProps {
-  handleTabClick: (tabName: string) => void;
-  tabName: string;
-  tabText: string;
-  active: boolean;
-}
-
-const TabContent: FC<TabContentProps> = ({
-  handleTabClick,
-  tabName,
-  tabText,
-  active,
-}) => {
-  return (
-    <div className={styles[`tab-content`]}>
-      {tabName !== "clains" && (
-        <LeaderBoardLeftTabIcon color={active ? "#FFBE17" : "#474747"} />
-      )}
-      <div
-        className={styles[`${active ? "tab-active" : "tab"}`]}
-        onClick={() => handleTabClick(tabName)}
-      >
-        {tabText}
-      </div>
-      <LeaderBoardTabIcon color={active ? "#FFBE17" : "#474747"} />
     </div>
   );
 };

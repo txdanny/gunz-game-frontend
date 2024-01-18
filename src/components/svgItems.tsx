@@ -86,111 +86,32 @@ export const CloseIcon: FC<IconProps> = () => {
   );
 };
 
-export const LeaderBoardTabIcon: FC<IconProps> = ({ color }) => {
+export const LeaderBoardTabIcon: FC<IconProps> = ({ color, className }) => {
   return (
     <svg
-      width="26"
+      width="18"
       height="53"
-      viewBox="0 0 26 53"
+      viewBox="0 0 18 53"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className ? className : ""}
     >
-      <g filter="url(#filter0_d_3_1496)">
-        <path
-          d="M18 53L2.72606e-06 -1.57361e-06L-1.90735e-06 53L18 53Z"
-          fill={color}
-        />
-      </g>
-      <defs>
-        <filter
-          id="filter0_d_3_1496"
-          x="0"
-          y="-4"
-          width="26"
-          height="61"
-          filterUnits="userSpaceOnUse"
-          colorInterpolationFilters="sRGB"
-        >
-          <feFlood floodOpacity="0" result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dx="4" />
-          <feGaussianBlur stdDeviation="2" />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_3_1496"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow_3_1496"
-            result="shape"
-          />
-        </filter>
-      </defs>
+      <path d="M18 53L4.63341e-06 -1.57361e-06L0 53L18 53Z" fill={color} />
     </svg>
   );
 };
 
-export const LeaderBoardLeftTabIcon: FC<IconProps> = ({ color }) => {
+export const LeaderBoardLeftTabIcon: FC<IconProps> = ({ color, className }) => {
   return (
     <svg
-      width="26"
+      width="18"
       height="53"
-      viewBox="0 0 26 53"
+      viewBox="0 0 18 53"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className ? className : ""}
     >
-      <g filter="url(#filter0_d_8_2019)">
-        <path d="M8.5 53L26.5 -1.57361e-06L26.5 53L8.5 53Z" fill={color} />
-      </g>
-      <defs>
-        <filter
-          id="filter0_d_8_2019"
-          x="0.5"
-          y="-4"
-          width="26"
-          height="53"
-          filterUnits="userSpaceOnUse"
-          colorInterpolationFilters="sRGB"
-        >
-          <feFlood floodOpacity="0" result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dx="-4" />
-          <feGaussianBlur stdDeviation="2" />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_8_2019"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow_8_2019"
-            result="shape"
-          />
-        </filter>
-      </defs>
+      <path d="M0 53L18 -1.57361e-06L18 53L0 53Z" fill={color} />
     </svg>
   );
 };

@@ -1,0 +1,28 @@
+.seachinput {
+  background: rgba(0, 0, 0, 0.25);
+  width: 280px;
+  padding: 8px 12px 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+
+  .search-title {
+    color: var(--color-primary-50);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 373;
+    line-height: 20px; /* 125% */
+    letter-spacing: 0.2px;
+    font-family: var(--font-tungsten);
+  }
+
+  .search-value {
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    outline: none;
+    font-size: 15px;
+    font-family: var(--font-tungsten);
+    border: none;
+  }
+}
