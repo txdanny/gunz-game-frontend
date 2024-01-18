@@ -3,6 +3,8 @@ import MainPageLayout from "@/components/layout";
 import { PageWithBg } from "@/components/widgets";
 import Image from "next/image";
 import styles from "../../leaderboards.module.scss";
+import BackToHome from "@/components/leaderboards/user/backButton";
+import UserDetailTopBar from "@/components/leaderboards/user/topBar";
 
 export const metadata: Metadata = {
   title: "User Detail | GunZ Website",
@@ -21,7 +23,10 @@ export default function Ranking() {
             alt=""
           />
         </div>
-        <div className={styles["container"]}></div>
+        <div className={styles["container"]}>
+          <BackToHome url="/leaderboards" title="back to leaderboard" />
+          <UserDetailTopBar />
+        </div>
       </PageWithBg>
     </MainPageLayout>
   );
