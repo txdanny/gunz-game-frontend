@@ -9,22 +9,10 @@ import RankTable from ".";
 //     usePlayerData: jest.fn(() => {
 //       const players = [
 //         {
-//           rank: 1,
-//           clanName: "Mock Clan 1",
-//           emblem: "/images/emblem1.png",
-//           leader: "Mock Leader 1",
-//           winLosses: "10W / 5L",
-//           winRate: "66%",
-//           points: 1200,
+//          
 //         },
 //         {
-//           rank: 2,
-//           clanName: "Mock Clan 2",
-//           emblem: "/images/emblem2.png",
-//           leader: "Mock Leader 2",
-//           winLosses: "8W / 7L",
-//           winRate: "53%",
-//           points: 1050,
+//           
 //         },
 //         // Add more mock player data objects as needed
 //       ];
