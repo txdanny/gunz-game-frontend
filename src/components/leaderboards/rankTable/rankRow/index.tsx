@@ -55,7 +55,7 @@ const RankRow: FC<Player> = ({
       <div className={styles["value"]}>{role}</div>
       <div
         className={styles["value"]}
-      >{`${playCount.win} / ${playCount.loss}`}</div>
+      >{`${playCount.win} / ${playCount.lose}`}</div>
       <div className={styles["value"]}>{playCount.winRate}</div>
       <div className={styles["value"]}>{points}</div>
       <div
