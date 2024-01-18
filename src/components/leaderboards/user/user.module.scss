@@ -73,3 +73,32 @@
     margin-left: 10px;
   }
 }
+
+.info-content {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rank-box {
+  width: 360px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  p {
+    color: white;
+    text-shadow: var(--shadow-box-1);
+    font-family: var(--font-tungsten);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    opacity: 0.75;
+  }
+  .medal {
+    position: relative;
+    width: 360px;
+    height: 340px;
+  }
+}

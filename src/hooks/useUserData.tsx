@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import axiosRetry from "axios-retry";
 import { Player } from "@/utils/types";
+import { PLAYERS } from "@/config";
 
 // Configure axios-retry
 axiosRetry(axios, {
@@ -32,7 +33,7 @@ const useUserData = (userId: string) => {
     fetchUserData();
   }, [userId]);
 
-  return { userData, loading, error };
+  return { userData: userData ? userData : PLAYERS[0], loading, error };
 };
 
 export default useUserData;
