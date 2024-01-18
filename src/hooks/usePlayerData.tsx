@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import axios, { AxiosRequestConfig } from "axios";
 import axiosRetry from "axios-retry";
-import { IndividualsPlayer, Player, LadderPlayer } from "@/utils/types";
-import { API_URL, INDIVIDUALPLAYERS, LADDERPLAYERS, PLAYERS } from "@/config";
+import { Player } from "@/utils/types";
+import { API_URL, PLAYERS } from "@/config";
 
 // Apply axios-retry globally
 axiosRetry(axios, { retries: 3, retryDelay: axiosRetry.exponentialDelay });
@@ -13,20 +13,12 @@ export const usePlayerData = (
   config?: AxiosRequestConfig
 ): {
   players: Player[] | null;
-  individualplayers: IndividualsPlayer[] | null;
-  ladderPlayers: LadderPlayer[] | null;
   loadMore: () => void;
   loading: boolean;
   error: string | null;
 } => {
   const endpoint = API_URL + "/user/ranking";
   const [players, setPlayers] = useState<Player[] | null>(null);
-  const [individualplayers, setIndividualPlayers] = useState<
-    IndividualsPlayer[] | null
-  >(null);
-  const [ladderPlayers, setLadderPlayers] = useState<LadderPlayer[] | null>(
-    null
-  );
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -50,10 +42,6 @@ export const usePlayerData = (
 
   return {
     players: players ? players : PLAYERS,
-    individualplayers: individualplayers
-      ? individualplayers
-      : INDIVIDUALPLAYERS,
-    ladderPlayers: ladderPlayers ? ladderPlayers : LADDERPLAYERS,
     loadMore,
     loading,
     error,

@@ -100,7 +100,7 @@ const MobileRankTable: FC<MobileRankTable> = () => {
                 <p>Wins / Losses</p>
                 <div>
                   <span>
-                    {data.playCount.win} / {data.playCount.loss}
+                    {data.playCount.win} / {data.playCount.lose}
                   </span>
                 </div>
               </div>

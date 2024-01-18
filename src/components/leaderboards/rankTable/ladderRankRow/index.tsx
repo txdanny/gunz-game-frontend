@@ -1,15 +1,9 @@
-import { LadderPlayer, Player, Rank } from "@/utils/types";
+import { Player, Rank } from "@/utils/types";
 import { FC } from "react";
 import styles from "../rankTable.module.scss";
 import Image from "next/image";
 
-const LadderRankRow: FC<LadderPlayer> = ({
-  rank,
-  username,
-  playCount,
-  winRate,
-  points,
-}) => {
+const LadderRankRow: FC<Player> = ({ rank, username, playCount, points }) => {
   const backgroundClass: Rank = {
     1: "bg-gold",
     2: "bg-silver",
@@ -38,10 +32,12 @@ const LadderRankRow: FC<LadderPlayer> = ({
         )}
       </div>
       <div className={styles["name"]}>{username}</div>
-      <div
-        className={styles["value"]}
-      >{`${playCount.win.toLocaleString()} / ${playCount.lose.toLocaleString()}`}</div>
-      <div className={styles["value"]}>{winRate.toLocaleString() + "%"}</div>
+      <div className={styles["value"]}>{`${playCount.win.toLocaleString()} / ${
+        playCount.lose
+      }`}</div>
+      <div className={styles["value"]}>
+        {playCount.winRate.toLocaleString() + "%"}
+      </div>
       <div className={styles["value"]}>{points.toLocaleString()}</div>
       <div
         className={`${

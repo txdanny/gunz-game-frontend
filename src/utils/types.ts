@@ -45,7 +45,7 @@ export interface Player {
   role: string;
   playCount: {
     win: number;
-    loss: number;
+    lose: number;
     winRate: number;
     kills: number;
     deaths: number;
