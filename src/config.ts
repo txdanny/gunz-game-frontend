@@ -438,7 +438,7 @@ export const HISTORYS: History[] = [
     id: "",
     date: "2023-08-12 (4:02 PM EST)",
     map: "Prison II",
-    winners: ["snuwfersucks"],
+    winners: ["ApMagic", "wodalG", "bonedamage"],
     firstPoints: 6,
     losers: "Mishandelaar",
     secondPoints: 5,
