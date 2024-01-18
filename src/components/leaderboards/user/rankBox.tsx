@@ -2,9 +2,12 @@ import { Rank } from "@/utils/types";
 import Image from "next/image";
 import { FC } from "react";
 
-const RankBox: FC<Rank> = (props) => {
+interface Props {
+  rank: number;
+}
+
+const RankBox: FC<Props> = ({ rank }) => {
   const ribbon = "";
-  console.log(props);
   return (
     <div className="rank-box">
       <p>Current Player Rank</p>
