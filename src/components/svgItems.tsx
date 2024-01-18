@@ -85,3 +85,33 @@ export const CloseIcon: FC<IconProps> = () => {
     </svg>
   );
 };
+
+export const LeaderBoardTabIcon: FC<IconProps> = ({ color, className }) => {
+  return (
+    <svg
+      width="18"
+      height="53"
+      viewBox="0 0 18 53"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className ? className : ""}
+    >
+      <path d="M18 53L4.63341e-06 -1.57361e-06L0 53L18 53Z" fill={color} />
+    </svg>
+  );
+};
+
+export const LeaderBoardLeftTabIcon: FC<IconProps> = ({ color, className }) => {
+  return (
+    <svg
+      width="18"
+      height="53"
+      viewBox="0 0 18 53"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className ? className : ""}
+    >
+      <path d="M0 53L18 -1.57361e-06L18 53L0 53Z" fill={color} />
+    </svg>
+  );
+};

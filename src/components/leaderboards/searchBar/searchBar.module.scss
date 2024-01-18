@@ -1,0 +1,22 @@
+.searchbar {
+  display: flex;
+  height: 82px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 64px;
+  gap: 40px;
+  align-self: stretch;
+
+  .input-group {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+  }
+  .button-group {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+}
