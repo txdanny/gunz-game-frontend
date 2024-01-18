@@ -1,9 +1,9 @@
-import { IndividualsPlayer, Player, Rank } from "@/utils/types";
+import { Player, Rank } from "@/utils/types";
 import { FC } from "react";
 import styles from "../rankTable.module.scss";
 import Image from "next/image";
 
-const IndividualRankRow: FC<IndividualsPlayer> = ({
+const IndividualRankRow: FC<Player> = ({
   rank,
   username,
   level,

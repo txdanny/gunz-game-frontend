@@ -4,19 +4,13 @@ import styles from "./rankTable.module.scss";
 import { usePlayerData } from "@/hooks/usePlayerData";
 import RankRow from "./rankRow";
 import LoadMoreButton from "@/components/button/loadMoreButton";
-import {
-  CLANTABLETDS,
-  INDIVIDUALTABLETDS,
-  LADDERTABLETDS,
-  HISTORYTABLETDS,
-} from "@/config";
+import { CLANTABLETDS, INDIVIDUALTABLETDS, LADDERTABLETDS } from "@/config";
 import { useSearchParams } from "next/navigation";
 import IndividualRankRow from "./individualRankRow";
 import LadderRankRow from "./ladderRankRow";
 
 const RankTable: FC = () => {
-  const { players, individualplayers, ladderPlayers, loadMore } =
-    usePlayerData();
+  const { players, loadMore } = usePlayerData();
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tabs");
   const tdData =
@@ -24,9 +18,7 @@ const RankTable: FC = () => {
       ? CLANTABLETDS
       : tabParam === "individuals"
       ? INDIVIDUALTABLETDS
-      : tabParam === "ladder"
-      ? LADDERTABLETDS
-      : HISTORYTABLETDS;
+      : LADDERTABLETDS;
 
   const renderPlayerRows = () => {
     if (tabParam === "clans") {
@@ -36,15 +28,15 @@ const RankTable: FC = () => {
       );
     } else if (tabParam === "individuals") {
       return (
-        individualplayers &&
-        individualplayers.map((player, index) => (
+        players &&
+        players.map((player, index) => (
           <IndividualRankRow {...player} key={index} />
         ))
       );
     } else {
       return (
-        ladderPlayers &&
-        ladderPlayers.map((player, index) => (
+        players &&
+        players.map((player, index) => (
           <LadderRankRow {...player} key={index} />
         ))
       );
