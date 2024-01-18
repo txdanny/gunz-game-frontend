@@ -63,3 +63,15 @@ export interface IndividualsPlayer {
   };
   points: number;
 }
+
+export interface LadderPlayer {
+  id: string;
+  rank: number;
+  username: string;
+  playCount: {
+    win: number;
+    lose: number;
+  };
+  winRate: number;
+  points: number;
+}

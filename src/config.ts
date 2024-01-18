@@ -1,4 +1,10 @@
-import { IndividualsPlayer, NavLink, Player, Streaming } from "@/utils/types";
+import {
+  IndividualsPlayer,
+  LadderPlayer,
+  NavLink,
+  Player,
+  Streaming,
+} from "@/utils/types";
 
 export const API_URL = process.env.NEXT_PUBLIC_API_URL
   ? process.env.NEXT_PUBLIC_API_URL
@@ -172,7 +178,7 @@ export const SOCIALS = [
   },
 ];
 
-export const CLAINTABLETDS = [
+export const CLANTABLETDS = [
   "Rank",
   "Clan",
   "Emblem",
@@ -198,6 +204,8 @@ export const LADDERTABLETDS = [
   "Win Rate",
   "Points",
 ];
+
+export const HISTORYTABLETDS = ["Date", "Map", "Winners", "Losers", "Points"];
 
 export const PLAYERS: Player[] = [
   {
@@ -493,6 +501,120 @@ export const INDIVIDUALPLAYERS: IndividualsPlayer[] = [
       kills: 67500,
       deaths: 22019,
     },
+    points: 3.06,
+  },
+];
+
+export const LADDERPLAYERS: LadderPlayer[] = [
+  {
+    id: "",
+    rank: 1,
+    username: "CJCESAR",
+    playCount: {
+      win: 438,
+      lose: 295,
+    },
+    winRate: 60,
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 2,
+    username: "cazador007",
+    playCount: {
+      win: 438,
+      lose: 295,
+    },
+    winRate: 60,
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 3,
+    username: "Armaxr",
+    playCount: {
+      win: 438,
+      lose: 295,
+    },
+    winRate: 60,
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 4,
+    username: "Cyxonse",
+    playCount: {
+      win: 438,
+      lose: 295,
+    },
+    winRate: 60,
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 5,
+    username: "Cyxonse",
+    playCount: {
+      win: 438,
+      lose: 295,
+    },
+    winRate: 60,
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 6,
+    username: "Cyxonse",
+    playCount: {
+      win: 438,
+      lose: 295,
+    },
+    winRate: 60,
+    points: 3.06,
+  },
+
+  {
+    id: "",
+    rank: 7,
+    username: "Cyxonse",
+    playCount: {
+      win: 438,
+      lose: 295,
+    },
+    winRate: 60,
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 8,
+    username: "Cyxonse",
+    playCount: {
+      win: 438,
+      lose: 295,
+    },
+    winRate: 60,
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 9,
+    username: "Cyxonse",
+    playCount: {
+      win: 438,
+      lose: 295,
+    },
+    winRate: 60,
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 10,
+    username: "Cyxonse",
+    playCount: {
+      win: 438,
+      lose: 295,
+    },
+    winRate: 60,
     points: 3.06,
   },
 ];
