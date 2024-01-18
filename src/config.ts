@@ -18,10 +18,10 @@ export const NAV_LINKS: NavLink[] = [
     title: "Leaderboards",
     url: "#",
     submenu: [
-      { title: "Clans", url: "/leaderboard/clans" },
-      { title: "Individuals", url: "/leaderboard/individuals" },
-      { title: "Ladder", url: "/leaderboard/ladder" },
-      { title: "History", url: "/leaderboard/history" },
+      { title: "Clans", url: "/leaderboards?tabs=clains" },
+      { title: "Individuals", url: "/leaderboard?tabs=individuals" },
+      { title: "Ladder", url: "/leaderboard?tabs=ladder" },
+      { title: "History", url: "/leaderboard?tabs=history" },
     ],
   },
   {

@@ -1,0 +1,10 @@
+.topbar {
+  display: flex;
+  height: 60px;
+  padding: 4px 80px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+  background: var(--color-primary-50);
+}
