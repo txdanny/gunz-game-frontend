@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "../../leaderboards.module.scss";
 import BackToHome from "@/components/leaderboards/user/backButton";
 import UserDetailTopBar from "@/components/leaderboards/user/topBar";
+import UserInfo from "@/components/leaderboards/user/userInfo";
 
 export const metadata: Metadata = {
   title: "User Detail | GunZ Website",
@@ -26,6 +27,7 @@ export default function Ranking() {
         <div className={styles["container"]}>
           <BackToHome url="/leaderboards" title="back to leaderboard" />
           <UserDetailTopBar />
+          <UserInfo />
         </div>
       </PageWithBg>
     </MainPageLayout>
