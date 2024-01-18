@@ -1,3 +1,6 @@
+.user-info {
+    padding-bottom: 80px;
+}
 .breadcrumbs {
   background-color: var(--color-secondary-100);
   display: flex;
@@ -56,7 +59,6 @@
 .topbar {
   background-color: var(--color-primary-50);
   padding: 14px;
-  width: 100%;
   color: black;
   text-align: center;
   font-family: var(--font-din-alternate);
@@ -78,27 +80,122 @@
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  .divide {
+    width: 100%;
+    height: 8px;
+    background-color: var(--color-primary-50);
+    border-radius: 8px;
+  }
 }
-
+.info-title {
+  color: white;
+  text-shadow: var(--shadow-box-1);
+  font-family: var(--font-tungsten);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.72px;
+  opacity: 0.75;
+}
 .rank-box {
   width: 360px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  p {
-    color: white;
-    text-shadow: var(--shadow-box-1);
-    font-family: var(--font-tungsten);
-    font-size: 36px;
-    font-style: normal;
-    font-weight: bold;
-    line-height: normal;
-    letter-spacing: 0.72px;
-    opacity: 0.75;
-  }
   .medal {
     position: relative;
     width: 360px;
     height: 340px;
+    .rank {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      display: grid;
+      place-content: center;
+      color: white;
+      text-align: center;
+      text-shadow: var(--shadow-box-1);
+      font-family: var(--font-tungsten);
+      font-size: 80px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: normal;
+      margin-top: -28px;
+    }
+  }
+}
+
+.chart-description {
+  color: white;
+  text-align: center;
+  text-shadow: var(--shadow-box-1);
+  font-family: var(--font-tungsten);
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  text-align: center;
+  font-size: 24px;
+  opacity: 0.75;
+  text-transform: uppercase;
+  span {
+    font-size: 40px;
+  }
+}
+
+.current-clan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .clan-data {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 340px;
+  }
+  .pfp {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  .label {
+    margin-top: 20px;
+    color: white;
+    font-family: var(--font-tungsten);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    opacity: 0.9;
+    text-transform: uppercase;
+  }
+
+  .value {
+    color: white;
+    font-family: var(--font-tungsten);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    opacity: 0.75;
   }
 }
