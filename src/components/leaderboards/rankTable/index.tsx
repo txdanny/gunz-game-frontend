@@ -4,7 +4,12 @@ import styles from "./rankTable.module.scss";
 import { usePlayerData } from "@/hooks/usePlayerData";
 import RankRow from "./rankRow";
 import LoadMoreButton from "@/components/button/loadMoreButton";
-import { CLANTABLETDS, INDIVIDUALTABLETDS, LADDERTABLETDS } from "@/config";
+import {
+  CLANTABLETDS,
+  HISTORYTABLETDS,
+  INDIVIDUALTABLETDS,
+  LADDERTABLETDS,
+} from "@/config";
 import { useSearchParams } from "next/navigation";
 import IndividualRankRow from "./individualRankRow";
 import LadderRankRow from "./ladderRankRow";
@@ -18,7 +23,9 @@ const RankTable: FC = () => {
       ? CLANTABLETDS
       : tabParam === "individuals"
       ? INDIVIDUALTABLETDS
-      : LADDERTABLETDS;
+      : tabParam === "ladder"
+      ? LADDERTABLETDS
+      : HISTORYTABLETDS;
 
   const renderPlayerRows = () => {
     if (tabParam === "clans") {

@@ -1,4 +1,4 @@
-import { NavLink, Player, Streaming } from "@/utils/types";
+import { NavLink, Player, Streaming, History } from "@/utils/types";
 
 export const API_URL = process.env.NEXT_PUBLIC_API_URL
   ? process.env.NEXT_PUBLIC_API_URL
@@ -177,7 +177,7 @@ export const CLANTABLETDS = [
   "Clan",
   "Emblem",
   "Leader",
-  "Wins / Losees",
+  "Wins / Losers",
   "Win Rate",
   "Points",
 ];
@@ -199,11 +199,13 @@ export const LADDERTABLETDS = [
   "Points",
 ];
 
+export const HISTORYTABLETDS = ["Date", "Map", "Winners", "Losers", "Points"];
+
 export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 1,
-    username: "Cyxonse",
+    username: "Legend",
     type: {
       name: "clan",
       rank: 1,
@@ -211,7 +213,7 @@ export const PLAYERS: Player[] = [
     emblem: "/images/temp/user-2.png",
     role: "Cyzone",
     level: 99,
-    experience: 1617124551,
+    experience: 33417124551,
     playCount: {
       win: 35,
       lose: 4,
@@ -224,14 +226,14 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 2,
-    username: "Cyxonse",
+    username: "Rakuzan",
     type: {
       name: "clan",
       rank: 1,
     },
     emblem: "/images/temp/user-1.png",
     role: "Cyzone",
-    level: 99,
+    level: 98,
     experience: 1617124551,
     playCount: {
       win: 35,
@@ -245,7 +247,7 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 3,
-    username: "Cyxonse",
+    username: "Armaxr",
     type: {
       name: "clan",
       rank: 1,
@@ -273,7 +275,7 @@ export const PLAYERS: Player[] = [
     },
     emblem: undefined,
     role: "Cyzone",
-    level: 99,
+    level: 97,
     experience: 1617124551,
     playCount: {
       win: 35,
@@ -287,15 +289,15 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 5,
-    username: "Cyxonse",
+    username: "UltdNation",
     type: {
       name: "clan",
       rank: 1,
     },
     emblem: undefined,
     role: "Cyzone",
-    level: 99,
-    experience: 1617124551,
+    level: 95,
+    experience: 16171345551,
     playCount: {
       win: 35,
       lose: 4,
@@ -308,7 +310,7 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 6,
-    username: "Cyxonse",
+    username: "Legion",
     type: {
       name: "clan",
       rank: 1,
@@ -330,14 +332,14 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 7,
-    username: "Cyxonse",
+    username: "DBZS",
     type: {
       name: "clan",
       rank: 1,
     },
     emblem: undefined,
     role: "Cyzone",
-    level: 99,
+    level: 56,
     experience: 1617124551,
     playCount: {
       win: 35,
@@ -351,14 +353,14 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 8,
-    username: "Cyxonse",
+    username: "Crusaders",
     type: {
       name: "clan",
       rank: 1,
     },
     emblem: undefined,
     role: "Cyzone",
-    level: 99,
+    level: 97,
     experience: 1617124551,
     playCount: {
       win: 35,
@@ -372,14 +374,14 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 9,
-    username: "Cyxonse",
+    username: "Goojofoq",
     type: {
       name: "clan",
       rank: 1,
     },
     emblem: undefined,
     role: "Cyzone",
-    level: 99,
+    level: 67,
     experience: 1617124551,
     playCount: {
       win: 35,
@@ -393,14 +395,14 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 10,
-    username: "Cyxonse",
+    username: "Capable",
     type: {
       name: "clan",
       rank: 1,
     },
     emblem: undefined,
     role: "Cyzone",
-    level: 99,
+    level: 87,
     experience: 1617124551,
     playCount: {
       win: 35,
@@ -410,5 +412,35 @@ export const PLAYERS: Player[] = [
       deaths: 22019,
     },
     points: 962,
+  },
+];
+
+export const HISTORYS: History[] = [
+  {
+    id: "",
+    date: "2023-08-12 (4:30 PM EST)",
+    map: "Factory",
+    winners: ["fright"],
+    firstPoints: 6,
+    losers: "King_WarZ",
+    secondPoints: 5,
+  },
+  {
+    id: "",
+    date: "2023-08-12 (4:02 PM EST)",
+    map: "Prison II",
+    winners: ["snuwfersucks"],
+    firstPoints: 6,
+    losers: "Mishandelaar",
+    secondPoints: 5,
+  },
+  {
+    id: "",
+    date: "2023-08-12 (4:02 PM EST)",
+    map: "Prison II",
+    winners: ["snuwfersucks"],
+    firstPoints: 6,
+    losers: "Mishandelaar",
+    secondPoints: 5,
   },
 ];

@@ -54,3 +54,13 @@ export interface Player {
   points: number;
   experience: number;
 }
+
+export interface History {
+  id: string;
+  date: string;
+  map: string;
+  winners: string[];
+  firstPoints: number;
+  losers: string;
+  secondPoints: number;
+}
