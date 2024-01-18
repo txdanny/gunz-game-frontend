@@ -3,11 +3,11 @@ import { FC } from "react";
 import styles from "../rankTable.module.scss";
 import Image from "next/image";
 
-const RankRow: FC<Player> = ({
+const IndividualRankRow: FC<Player> = ({
   rank,
   username,
-  emblem,
-  role,
+  level,
+  experience,
   playCount,
   points,
 }) => {
@@ -39,25 +39,12 @@ const RankRow: FC<Player> = ({
         )}
       </div>
       <div className={styles["name"]}>{username}</div>
-      <div className={styles["emblem"]}>
-        {emblem ? (
-          <div className={styles["pfp"]}>
-            <Image src={emblem} alt="" fill />
-          </div>
-        ) : (
-          <div className={styles["no-image"]}>
-            No
-            <br />
-            Emblem
-          </div>
-        )}
-      </div>
-      <div className={styles["value"]}>{role}</div>
+      <div className={styles["value"]}>{level}</div>
+      <div className={styles["value"]}>{experience.toLocaleString()}</div>
       <div
         className={styles["value"]}
-      >{`${playCount.win} / ${playCount.lose}`}</div>
-      <div className={styles["value"]}>{playCount.winRate}</div>
-      <div className={styles["value"]}>{points}</div>
+      >{`${playCount.kills.toLocaleString()} / ${playCount.deaths.toLocaleString()}`}</div>
+      <div className={styles["value"]}>{points.toLocaleString()}</div>
       <div
         className={`${
           styles[rank < 4 ? hoverClass[rank] : "gradient-normal"]
@@ -67,4 +54,4 @@ const RankRow: FC<Player> = ({
   );
 };
 
-export default RankRow;
+export default IndividualRankRow;

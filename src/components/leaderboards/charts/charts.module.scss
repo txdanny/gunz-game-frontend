@@ -1,0 +1,37 @@
+.pie-chart {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .title {
+    color: white;
+    text-shadow: var(--shadow-box-1);
+    font-family: var(--font-tungsten);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    opacity: 0.75;
+    text-align: center;
+  }
+  .pie {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .percent {
+      color: white;
+      text-align: center;
+      text-shadow: var(--shadow-box-1);
+      font-family: var(--font-tungsten);
+      font-size: 80px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: normal;
+    }
+  }
+}

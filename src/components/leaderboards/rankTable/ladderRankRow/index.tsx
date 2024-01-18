@@ -3,14 +3,7 @@ import { FC } from "react";
 import styles from "../rankTable.module.scss";
 import Image from "next/image";
 
-const RankRow: FC<Player> = ({
-  rank,
-  username,
-  emblem,
-  role,
-  playCount,
-  points,
-}) => {
+const LadderRankRow: FC<Player> = ({ rank, username, playCount, points }) => {
   const backgroundClass: Rank = {
     1: "bg-gold",
     2: "bg-silver",
@@ -39,25 +32,13 @@ const RankRow: FC<Player> = ({
         )}
       </div>
       <div className={styles["name"]}>{username}</div>
-      <div className={styles["emblem"]}>
-        {emblem ? (
-          <div className={styles["pfp"]}>
-            <Image src={emblem} alt="" fill />
-          </div>
-        ) : (
-          <div className={styles["no-image"]}>
-            No
-            <br />
-            Emblem
-          </div>
-        )}
+      <div className={styles["value"]}>{`${playCount.win.toLocaleString()} / ${
+        playCount.lose
+      }`}</div>
+      <div className={styles["value"]}>
+        {playCount.winRate.toLocaleString() + "%"}
       </div>
-      <div className={styles["value"]}>{role}</div>
-      <div
-        className={styles["value"]}
-      >{`${playCount.win} / ${playCount.lose}`}</div>
-      <div className={styles["value"]}>{playCount.winRate}</div>
-      <div className={styles["value"]}>{points}</div>
+      <div className={styles["value"]}>{points.toLocaleString()}</div>
       <div
         className={`${
           styles[rank < 4 ? hoverClass[rank] : "gradient-normal"]
@@ -67,4 +48,4 @@ const RankRow: FC<Player> = ({
   );
 };
 
-export default RankRow;
+export default LadderRankRow;

@@ -1,4 +1,4 @@
-import { NavLink, Player, Streaming } from "@/utils/types";
+import { NavLink, Player, Streaming, History } from "@/utils/types";
 
 export const API_URL = process.env.NEXT_PUBLIC_API_URL
   ? process.env.NEXT_PUBLIC_API_URL
@@ -18,10 +18,10 @@ export const NAV_LINKS: NavLink[] = [
     title: "Leaderboards",
     url: "#",
     submenu: [
-      { title: "Clans", url: "/leaderboards?tabs=clains" },
-      { title: "Individuals", url: "/leaderboard?tabs=individuals" },
-      { title: "Ladder", url: "/leaderboard?tabs=ladder" },
-      { title: "History", url: "/leaderboard?tabs=history" },
+      { title: "Clans", url: "/leaderboards?tabs=clans" },
+      { title: "Individuals", url: "/leaderboards?tabs=individuals" },
+      { title: "Ladder", url: "/leaderboards?tabs=ladder" },
+      { title: "History", url: "/leaderboards?tabs=history" },
     ],
   },
   {
@@ -172,6 +172,35 @@ export const SOCIALS = [
   },
 ];
 
+export const CLANTABLETDS = [
+  "Rank",
+  "Clan",
+  "Emblem",
+  "Leader",
+  "Wins / Losers",
+  "Win Rate",
+  "Points",
+];
+
+export const INDIVIDUALTABLETDS = [
+  "Rank",
+  "Character Name",
+  "Level",
+  "Experience",
+  "Kills / Deaths",
+  "K/D Ratio",
+];
+
+export const LADDERTABLETDS = [
+  "Rank",
+  "Character Name",
+  "Wins / Losees",
+  "Win Rate",
+  "Points",
+];
+
+export const HISTORYTABLETDS = ["Date", "Map", "Winners", "Losers", "Points"];
+
 export const PLAYERS: Player[] = [
   {
     id: "",
@@ -181,14 +210,18 @@ export const PLAYERS: Player[] = [
       name: "clan",
       rank: 1,
     },
-    emblem: "/images/temp/user-1.png",
-    role: "CLCESAR",
+    emblem: "/images/temp/user-2.png",
+    role: "Cyzone",
+    level: 99,
+    experience: 33417124551,
     playCount: {
       win: 35,
-      loss: 4,
+      lose: 4,
       winRate: 89.74,
+      kills: 67500,
+      deaths: 22019,
     },
-    points: 1095,
+    points: 962,
   },
   {
     id: "",
@@ -198,14 +231,18 @@ export const PLAYERS: Player[] = [
       name: "clan",
       rank: 1,
     },
-    emblem: "/images/temp/user-2.png",
-    role: "dianabol",
+    emblem: "/images/temp/user-1.png",
+    role: "Cyzone",
+    level: 98,
+    experience: 1617124551,
     playCount: {
-      win: 11,
-      loss: 4,
-      winRate: 85.54,
+      win: 35,
+      lose: 4,
+      winRate: 89.74,
+      kills: 67500,
+      deaths: 22019,
     },
-    points: 1018,
+    points: 962,
   },
   {
     id: "",
@@ -216,13 +253,17 @@ export const PLAYERS: Player[] = [
       rank: 1,
     },
     emblem: "/images/temp/user-3.png",
-    role: "Leiker",
+    role: "Cyzone",
+    level: 99,
+    experience: 1617124551,
     playCount: {
-      win: 10,
-      loss: 8,
-      winRate: 82.12,
+      win: 35,
+      lose: 4,
+      winRate: 89.74,
+      kills: 67500,
+      deaths: 22019,
     },
-    points: 978,
+    points: 962,
   },
   {
     id: "",
@@ -234,44 +275,56 @@ export const PLAYERS: Player[] = [
     },
     emblem: undefined,
     role: "Cyzone",
+    level: 97,
+    experience: 1617124551,
     playCount: {
       win: 35,
-      loss: 4,
+      lose: 4,
       winRate: 89.74,
+      kills: 67500,
+      deaths: 22019,
     },
     points: 962,
   },
   {
     id: "",
     rank: 5,
-    username: "Cyxonse",
+    username: "UltdNation",
     type: {
       name: "clan",
       rank: 1,
     },
     emblem: undefined,
     role: "Cyzone",
+    level: 95,
+    experience: 16171345551,
     playCount: {
       win: 35,
-      loss: 4,
+      lose: 4,
       winRate: 89.74,
+      kills: 67500,
+      deaths: 22019,
     },
     points: 962,
   },
   {
     id: "",
     rank: 6,
-    username: "Cyxonse",
+    username: "Legion",
     type: {
       name: "clan",
       rank: 1,
     },
     emblem: undefined,
     role: "Cyzone",
+    level: 99,
+    experience: 1617124551,
     playCount: {
       win: 35,
-      loss: 4,
+      lose: 4,
       winRate: 89.74,
+      kills: 67500,
+      deaths: 22019,
     },
     points: 962,
   },
@@ -279,69 +332,115 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 7,
-    username: "Cyxonse",
+    username: "DBZS",
     type: {
       name: "clan",
       rank: 1,
     },
     emblem: undefined,
     role: "Cyzone",
+    level: 56,
+    experience: 1617124551,
     playCount: {
       win: 35,
-      loss: 4,
+      lose: 4,
       winRate: 89.74,
+      kills: 67500,
+      deaths: 22019,
     },
     points: 962,
   },
   {
     id: "",
     rank: 8,
-    username: "Cyxonse",
+    username: "Crusaders",
     type: {
       name: "clan",
       rank: 1,
     },
     emblem: undefined,
     role: "Cyzone",
+    level: 97,
+    experience: 1617124551,
     playCount: {
       win: 35,
-      loss: 4,
+      lose: 4,
       winRate: 89.74,
+      kills: 67500,
+      deaths: 22019,
     },
     points: 962,
   },
   {
     id: "",
     rank: 9,
-    username: "Cyxonse",
+    username: "Goojofoq",
     type: {
       name: "clan",
       rank: 1,
     },
     emblem: undefined,
     role: "Cyzone",
+    level: 67,
+    experience: 1617124551,
     playCount: {
       win: 35,
-      loss: 4,
+      lose: 4,
       winRate: 89.74,
+      kills: 67500,
+      deaths: 22019,
     },
     points: 962,
   },
   {
     id: "",
     rank: 10,
-    username: "Cyxonse",
+    username: "Capable",
     type: {
       name: "clan",
       rank: 1,
     },
     emblem: undefined,
     role: "Cyzone",
+    level: 87,
+    experience: 1617124551,
     playCount: {
       win: 35,
-      loss: 4,
+      lose: 4,
       winRate: 89.74,
+      kills: 67500,
+      deaths: 22019,
     },
     points: 962,
+  },
+];
+
+export const HISTORYS: History[] = [
+  {
+    id: "",
+    date: "2023-08-12 (4:30 PM EST)",
+    map: "Factory",
+    winners: ["fright"],
+    firstPoints: 6,
+    losers: "King_WarZ",
+    secondPoints: 5,
+  },
+  {
+    id: "",
+    date: "2023-08-12 (4:02 PM EST)",
+    map: "Prison II",
+    winners: ["snuwfersucks"],
+    firstPoints: 6,
+    losers: "Mishandelaar",
+    secondPoints: 5,
+  },
+  {
+    id: "",
+    date: "2023-08-12 (4:02 PM EST)",
+    map: "Prison II",
+    winners: ["snuwfersucks"],
+    firstPoints: 6,
+    losers: "Mishandelaar",
+    secondPoints: 5,
   },
 ];

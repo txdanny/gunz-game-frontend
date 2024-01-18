@@ -4,11 +4,35 @@ import styles from "./rankHeader.module.scss";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 
-interface RankHeader {}
+interface HeaderProps {
+  title?: string;
+  subTitle?: string;
+}
 
-const RankHeader: FC<RankHeader> = () => {
+const RankHeader: FC<HeaderProps> = ({ title, subTitle }) => {
   const searchParams = useSearchParams();
-  const tabParam = searchParams.get("tabs");
+  const tabParam = searchParams.get("tabs") as string;
+
+  let titleText = title;
+
+  switch (tabParam) {
+    case "clans":
+      titleText = "clans ranked leaderboard";
+      break;
+    case "individuals":
+      titleText = "individuals ranked leaderboard";
+      break;
+    case "ladder":
+      titleText = "ladder leaderboard";
+      break;
+    case "history":
+      titleText = "ladder history";
+      break;
+    default:
+      // handle default case or do nothing for an empty string
+      break;
+  }
+
   return (
     <div className={styles[`header`]}>
       <div className={styles[`header-img`]}>
@@ -20,21 +44,8 @@ const RankHeader: FC<RankHeader> = () => {
         />
       </div>
       <div className={styles["header-title"]}>
-        <svg
-          width="12"
-          height="36"
-          viewBox="0 0 12 36"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            width="12"
-            height="35"
-            transform="translate(0 0.5)"
-            fill="#FFBE17"
-          />
-        </svg>
-        <p>{tabParam} RANKED LEADERBOARD</p>
+        <h2>{titleText}</h2>
+        {subTitle && <p>{subTitle}</p>}
       </div>
     </div>
   );

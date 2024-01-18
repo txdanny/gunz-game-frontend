@@ -46,4 +46,6 @@ $montserrat: var(--font-montserrat);
     rgba(255, 190, 23, 0.25) 100%
   );
   --bg-gradient-1: linear-gradient(180deg, #7e7e7e 0%, #525252 100%);
+  --bg-gradient-2: linear-gradient(132deg, #514a35 0%, rgba(0, 0, 0, 0) 80.32%),
+    #292c32;
 }

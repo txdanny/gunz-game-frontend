@@ -1,7 +1,6 @@
 import { FC } from "react";
 import styles from "./competiveRank.module.scss";
 import Image from "next/image";
-import WinnerCard from "@/components/landing/rank/winnerCard";
 
 interface CompetiveRank {}
 

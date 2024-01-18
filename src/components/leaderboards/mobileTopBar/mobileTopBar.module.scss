@@ -1,10 +1,33 @@
 .topbar {
-  display: flex;
+  position: relative;
+  display: none;
   height: 60px;
-  padding: 4px 80px;
+  padding: 4px;
   justify-content: center;
   align-items: center;
   gap: 12px;
   align-self: stretch;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   background: var(--color-primary-50);
+
+  @media (max-width: 1080px) {
+    display: flex;
+  }
+
+  .title {
+    color: black;
+    text-align: center;
+    font-family: var(--font-din-alternate);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .rank {
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
 }
