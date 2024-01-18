@@ -86,7 +86,7 @@ export const CloseIcon: FC<IconProps> = () => {
   );
 };
 
-export const LeaderBoardTabIcon: FC<IconProps> = ({ color, className }) => {
+export const TabEdgeIcon: FC<IconProps> = ({ color, className }) => {
   return (
     <svg
       width="18"
@@ -101,7 +101,7 @@ export const LeaderBoardTabIcon: FC<IconProps> = ({ color, className }) => {
   );
 };
 
-export const LeaderBoardLeftTabIcon: FC<IconProps> = ({ color, className }) => {
+export const TabEdgeLeftIcon: FC<IconProps> = ({ color, className }) => {
   return (
     <svg
       width="18"
@@ -112,6 +112,31 @@ export const LeaderBoardLeftTabIcon: FC<IconProps> = ({ color, className }) => {
       className={className ? className : ""}
     >
       <path d="M0 53L18 -1.57361e-06L18 53L0 53Z" fill={color} />
+    </svg>
+  );
+};
+
+export const MobileTopBarIcon: FC<IconProps> = () => {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="20" height="20" fill="url(#pattern0)" />
+      <defs>
+        <pattern
+          id="pattern0"
+          patternContentUnits="objectBoundingBox"
+          width="1"
+          height="1"
+        >
+          <use transform="scale(0.00195312)" />
+        </pattern>
+        <image id="image0_29_120" width="512" height="512" />
+      </defs>
     </svg>
   );
 };

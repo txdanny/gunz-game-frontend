@@ -50,3 +50,16 @@ export interface Player {
   };
   points: number;
 }
+
+export interface IndividualsPlayer {
+  id: string;
+  rank: number;
+  username: string;
+  level: number;
+  experience: number;
+  playCount: {
+    kills: number;
+    deaths: number;
+  };
+  points: number;
+}

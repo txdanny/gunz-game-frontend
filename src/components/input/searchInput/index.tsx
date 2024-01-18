@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { CSSProperties, FC } from "react";
 import styles from "./searchInput.module.scss";
 

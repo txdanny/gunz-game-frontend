@@ -1,17 +1,17 @@
 "use client";
 import { FC } from "react";
-import styles from "./rankHeader.module.scss";
+import styles from "./mobileTopBanner.module.scss";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 
-const RankHeader: FC = () => {
+const MobileTopBanner: FC = () => {
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tabs");
   return (
     <div className={styles[`header`]}>
       <div className={styles[`header-img`]}>
         <Image
-          src={"/images/header-ranking.png"}
+          src={"/images/header-ranking@mobile.png"}
           className="object-cover"
           fill
           alt=""
@@ -38,4 +38,4 @@ const RankHeader: FC = () => {
   );
 };
 
-export default RankHeader;
+export default MobileTopBanner;

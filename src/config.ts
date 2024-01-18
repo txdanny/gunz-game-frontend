@@ -1,4 +1,4 @@
-import { NavLink, Player, Streaming } from "@/utils/types";
+import { IndividualsPlayer, NavLink, Player, Streaming } from "@/utils/types";
 
 export const API_URL = process.env.NEXT_PUBLIC_API_URL
   ? process.env.NEXT_PUBLIC_API_URL
@@ -18,10 +18,10 @@ export const NAV_LINKS: NavLink[] = [
     title: "Leaderboards",
     url: "#",
     submenu: [
-      { title: "Clans", url: "/leaderboards?tabs=clains" },
-      { title: "Individuals", url: "/leaderboard?tabs=individuals" },
-      { title: "Ladder", url: "/leaderboard?tabs=ladder" },
-      { title: "History", url: "/leaderboard?tabs=history" },
+      { title: "Clans", url: "/leaderboards?tabs=clans" },
+      { title: "Individuals", url: "/leaderboards?tabs=individuals" },
+      { title: "Ladder", url: "/leaderboards?tabs=ladder" },
+      { title: "History", url: "/leaderboards?tabs=history" },
     ],
   },
   {
@@ -170,6 +170,33 @@ export const SOCIALS = [
     name: "tiktok",
     link: "#",
   },
+];
+
+export const CLAINTABLETDS = [
+  "Rank",
+  "Clan",
+  "Emblem",
+  "Leader",
+  "Wins / Losses",
+  "Win Rate",
+  "Points",
+];
+
+export const INDIVIDUALTABLETDS = [
+  "Rank",
+  "Character Name",
+  "Level",
+  "Experience",
+  "Kills / Deaths",
+  "K/D Ratio",
+];
+
+export const LADDERTABLETDS = [
+  "Rank",
+  "Character Name",
+  "Wins / Losses",
+  "Win Rate",
+  "Points",
 ];
 
 export const PLAYERS: Player[] = [
@@ -343,5 +370,129 @@ export const PLAYERS: Player[] = [
       winRate: 89.74,
     },
     points: 962,
+  },
+];
+
+export const INDIVIDUALPLAYERS: IndividualsPlayer[] = [
+  {
+    id: "",
+    rank: 1,
+    username: "CJCESAR",
+    level: 99,
+    experience: 1617124551,
+    playCount: {
+      kills: 67500,
+      deaths: 22019,
+    },
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 2,
+    username: "cazador007",
+    level: 96,
+    experience: 1617124551,
+    playCount: {
+      kills: 67500,
+      deaths: 22019,
+    },
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 3,
+    username: "Armaxr",
+    level: 96,
+    experience: 1617124551,
+    playCount: {
+      kills: 67500,
+      deaths: 22019,
+    },
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 4,
+    username: "Cyxonse",
+    level: 96,
+    experience: 1617124551,
+    playCount: {
+      kills: 67500,
+      deaths: 22019,
+    },
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 5,
+    username: "Cyxonse",
+    level: 96,
+    experience: 1617124551,
+    playCount: {
+      kills: 67500,
+      deaths: 22019,
+    },
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 6,
+    username: "Cyxonse",
+    level: 96,
+    experience: 1617124551,
+    playCount: {
+      kills: 67500,
+      deaths: 22019,
+    },
+    points: 3.06,
+  },
+
+  {
+    id: "",
+    rank: 7,
+    username: "Cyxonse",
+    level: 96,
+    experience: 1617124551,
+    playCount: {
+      kills: 67500,
+      deaths: 22019,
+    },
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 8,
+    username: "Cyxonse",
+    level: 96,
+    experience: 1617124551,
+    playCount: {
+      kills: 67500,
+      deaths: 22019,
+    },
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 9,
+    username: "Cyxonse",
+    level: 96,
+    experience: 1617124551,
+    playCount: {
+      kills: 67500,
+      deaths: 22019,
+    },
+    points: 3.06,
+  },
+  {
+    id: "",
+    rank: 10,
+    username: "Cyxonse",
+    level: 96,
+    experience: 1617124551,
+    playCount: {
+      kills: 67500,
+      deaths: 22019,
+    },
+    points: 3.06,
   },
 ];

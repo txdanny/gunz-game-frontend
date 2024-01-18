@@ -1,9 +1,6 @@
 import { FC } from "react";
 import styles from "./pageTabButton.module.scss";
-import {
-  LeaderBoardLeftTabIcon,
-  LeaderBoardTabIcon,
-} from "@/components/svgItems";
+import { TabEdgeIcon, TabEdgeLeftIcon } from "@/components/svgItems";
 
 interface PageTabButtonProps {
   handleTabClick: (tabName: string) => void;
@@ -22,39 +19,51 @@ const PageTabButton: FC<PageTabButtonProps> = ({
   leftDisableActiveState,
   rightDisableActiveState,
 }) => {
+  const getIconClassName = (
+    active?: boolean,
+    disableActiveState?: boolean,
+    iconType?: "left" | "right"
+  ) => {
+    if (iconType === "left") {
+      if (active) {
+        return "leftsvg-active";
+      } else if (disableActiveState) {
+        return "leftsvg-disable-active";
+      } else {
+        return "leftsvg-disable";
+      }
+    } else if (iconType === "right") {
+      if (active) {
+        return "rightsvg-active";
+      } else if (disableActiveState) {
+        return "rightsvg-disable-active";
+      } else {
+        return "rightsvg-disable";
+      }
+    }
+  };
+
   return (
-    <div className={styles[`tab-content`]}>
-      {tabName !== "clains" && (
-        <LeaderBoardLeftTabIcon
+    <div className={styles["tab-content"]}>
+      {tabName !== "clans" && (
+        <TabEdgeLeftIcon
           className={
             styles[
-              `${
-                active
-                  ? "leftsvg-active"
-                  : leftDisableActiveState
-                  ? "leftsvg-disable-active"
-                  : "leftsvg-disable"
-              }`
+              getIconClassName(active, leftDisableActiveState, "left") as string
             ]
           }
         />
       )}
       <p
-        className={styles[`${active ? "tab-active" : "tab"}`]}
+        className={styles[active ? "tab-active" : "tab"]}
         onClick={() => handleTabClick(tabName)}
       >
         {tabText}
       </p>
-      <LeaderBoardTabIcon
+      <TabEdgeIcon
         className={
           styles[
-            `${
-              active
-                ? "rightsvg-active"
-                : rightDisableActiveState
-                ? "rightsvg-disable-active"
-                : "rightsvg-disable"
-            }`
+            getIconClassName(active, rightDisableActiveState, "right") as string
           ]
         }
       />
