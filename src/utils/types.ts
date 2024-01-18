@@ -47,31 +47,10 @@ export interface Player {
     win: number;
     loss: number;
     winRate: number;
-  };
-  points: number;
-}
-
-export interface IndividualsPlayer {
-  id: string;
-  rank: number;
-  username: string;
-  level: number;
-  experience: number;
-  playCount: {
     kills: number;
     deaths: number;
   };
+  level: number;
   points: number;
-}
-
-export interface LadderPlayer {
-  id: string;
-  rank: number;
-  username: string;
-  playCount: {
-    win: number;
-    lose: number;
-  };
-  winRate: number;
-  points: number;
+  experience: number;
 }
