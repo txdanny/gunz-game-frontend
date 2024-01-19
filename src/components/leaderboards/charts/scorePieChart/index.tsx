@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "../charts.module.scss";
-import Piece from "./piece";
+import { PieChart } from "@mui/x-charts/PieChart";
+import { PieArc } from "@/components/svgItems";
 
 interface ChartProps {
   title: string;
@@ -18,10 +19,25 @@ const ScorePieChart: FC<ChartProps> = ({ title, percent, description }) => {
         )}%`}</div>
         {description}
 
-        <div className={styles["circle"]}>
-          {Array.from({ length: 10 }).map((_, key) => (
-            <Piece index={key} key={key} percent={0.75} />
-          ))}
+        <PieArc />
+        <div className={styles["circle-bg"]}>
+          <PieChart
+            width={300}
+            height={300}
+            series={[
+              {
+                data: [{ id: "s", value: 1 }],
+                innerRadius: 104,
+                outerRadius: 160,
+                paddingAngle: 1,
+                cornerRadius: 0,
+                startAngle: 0,
+                endAngle: 360 * percent,
+                cx: 145,
+                cy: 145,
+              },
+            ]}
+          />
         </div>
       </div>
     </div>

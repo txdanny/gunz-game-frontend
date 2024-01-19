@@ -51,3 +51,8 @@ a {
 .object-contain {
   object-fit: contain;
 }
+
+.MuiPieArc-root {
+  stroke: transparent !important;
+  fill: var(--color-primary-50) !important;
+}
