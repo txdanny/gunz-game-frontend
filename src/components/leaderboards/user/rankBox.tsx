@@ -12,9 +12,12 @@ const RankBox: FC<Props> = ({ rank }) => {
 
   return (
     <div className={styles["rank-box"]}>
-      <p>Current Player Rank</p>
+      <p className={styles["info-title"]}>Current Player Rank</p>
       <div className={styles["medal"]}>
-        <Image src={ribbon} className="object-contain" fill alt="" />
+        {ribbon !== "" && (
+          <Image src={ribbon} className="object-contain" fill alt="" />
+        )}
+        <div className={styles["rank"]}>{`#${rank}`}</div>
       </div>
     </div>
   );
