@@ -27,7 +27,11 @@ const MobileHeader: FC = () => {
           <>
             <div className={styles.navs}>
               {NAV_LINKS_MOBILE.map((item, key) => (
-                <ListGroup list={item} key={key} />
+                <ListGroup
+                  list={item}
+                  key={key}
+                  onCloseMenu={() => setOpened(false)}
+                />
               ))}
             </div>
             <div className={styles["bottom-control"]}>

@@ -10,7 +10,11 @@ import CompetiveRank from "@/components/leaderboards/competiveRank";
 import SearchBar from "@/components/leaderboards/searchBar";
 import MobileTopBar from "@/components/leaderboards/mobileTopBar";
 import MobileTopBanner from "@/components/leaderboards/mobileTopBanner";
-import MobileRankTable from "@/components/leaderboards/mobileRankTable";
+import MobileClansTable from "@/components/leaderboards/mobileClansTable";
+import HistoryTable from "@/components/leaderboards/historyTable";
+import MobileHistoryTable from "@/components/leaderboards/mobileHistoryTable";
+import MobileIndividualTable from "@/components/leaderboards/mobileIndividualTable";
+import MobileLadderTable from "@/components/leaderboards/mobileLadderTable";
 
 export const metadata: Metadata = {
   title: "Ranking | GunZ Website",
@@ -37,7 +41,11 @@ export default function Ranking() {
           <CompetiveRank />
           <SearchBar />
           <RankTable />
-          <MobileRankTable />
+          <HistoryTable />
+          <MobileClansTable />
+          <MobileIndividualTable />
+          <MobileLadderTable />
+          <MobileHistoryTable />
         </div>
       </PageWithBg>
     </MainPageLayout>

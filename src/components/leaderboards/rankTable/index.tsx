@@ -15,7 +15,7 @@ import IndividualRankRow from "./individualRankRow";
 import LadderRankRow from "./ladderRankRow";
 
 const RankTable: FC = () => {
-  const { players, loadMore } = usePlayerData();
+  const { players, historys, loadMore } = usePlayerData();
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tabs");
   const tdData =
@@ -23,9 +23,7 @@ const RankTable: FC = () => {
       ? CLANTABLETDS
       : tabParam === "individuals"
       ? INDIVIDUALTABLETDS
-      : tabParam === "ladder"
-      ? LADDERTABLETDS
-      : HISTORYTABLETDS;
+      : LADDERTABLETDS;
 
   const renderPlayerRows = () => {
     if (tabParam === "clans") {
@@ -40,7 +38,7 @@ const RankTable: FC = () => {
           <IndividualRankRow {...player} key={index} />
         ))
       );
-    } else {
+    } else if (tabParam === "ladder") {
       return (
         players &&
         players.map((player, index) => (
@@ -51,23 +49,27 @@ const RankTable: FC = () => {
   };
 
   return (
-    <div className={styles["rank-table"]}>
-      <div className={styles["table"]}>
-        <div className={styles["thead"]}>
-          <div className={styles["tr"]}>
-            {tdData.map((td, index) => (
-              <div className={styles["td"]} key={index}>
-                {td}
+    <>
+      {tabParam !== "history" && (
+        <div className={styles["rank-table"]}>
+          <div className={styles["table"]}>
+            <div className={styles["thead"]}>
+              <div className={styles["tr"]}>
+                {tdData.map((td, index) => (
+                  <div className={styles["td"]} key={index}>
+                    {td}
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className={styles["tbody"]}>{renderPlayerRows()}</div>
+          </div>
+          <div className={styles["action"]}>
+            <LoadMoreButton onClick={loadMore} title="Load More" />
           </div>
         </div>
-        <div className={styles["tbody"]}>{renderPlayerRows()}</div>
-      </div>
-      <div className={styles["action"]}>
-        <LoadMoreButton onClick={loadMore} title="Load More" />
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 

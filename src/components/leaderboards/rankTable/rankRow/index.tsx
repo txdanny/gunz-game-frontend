@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const RankRow: FC<Player> = ({
   rank,
-  username,
+  clanName,
   emblem,
   role,
   playCount,
@@ -38,7 +38,7 @@ const RankRow: FC<Player> = ({
           rank
         )}
       </div>
-      <div className={styles["name"]}>{username}</div>
+      <div className={styles["name"]}>{clanName}</div>
       <div className={styles["emblem"]}>
         {emblem ? (
           <div className={styles["pfp"]}>

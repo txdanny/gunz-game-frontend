@@ -8,9 +8,10 @@ import Link from "next/link";
 
 interface GroupProps {
   list: NavLink;
+  onCloseMenu: () => void;
 }
 
-const ListGroup: FC<GroupProps> = ({ list }) => {
+const ListGroup: FC<GroupProps> = ({ list, onCloseMenu }) => {
   const [opened, setOpened] = useState<boolean>(false);
 
   return (
@@ -40,7 +41,11 @@ const ListGroup: FC<GroupProps> = ({ list }) => {
         }}
       >
         {list.submenu?.map((subMenuItem, index) => (
-          <div key={`${index}-${subMenuItem.title}`} className={styles["list"]}>
+          <div
+            key={`${index}-${subMenuItem.title}`}
+            className={styles["list"]}
+            onClick={() => onCloseMenu()}
+          >
             <Link href={subMenuItem.url}>{subMenuItem.title}</Link>
           </div>
         ))}
