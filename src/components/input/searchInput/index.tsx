@@ -8,10 +8,10 @@ interface InputProps {
   onChange?: () => void;
 }
 
-const SearchInput: FC<InputProps> = ({}) => {
+const SearchInput: FC<InputProps> = ({ title }) => {
   return (
     <div className={styles["seachinput"]}>
-      <div className={styles["search-title"]}>Search for a Clan</div>
+      <div className={styles["search-title"]}>{title}</div>
       <input className={styles["search-value"]} />
     </div>
   );

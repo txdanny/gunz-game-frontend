@@ -4,7 +4,7 @@ import { Winner } from "@/utils/types";
 import Image from "next/image";
 import { getOrdinalFormat } from "@/utils/format";
 
-const WinnerCard: FC<Winner> = ({ username, pts, rank: { rank }, pfp }) => {
+const WinnerCard: FC<Winner> = ({ clanName, pts, rank: { rank }, pfp }) => {
   const rankClassMap = {
     1: "gradient-gold",
     2: "gradient-silver",
@@ -29,12 +29,12 @@ const WinnerCard: FC<Winner> = ({ username, pts, rank: { rank }, pfp }) => {
             <Image
               src={pfp}
               className="object-cover"
-              alt={`Profile Picture of ${username}`}
+              alt={`Profile Picture of ${clanName}`}
               fill
             />
           </div>
         </div>
-        <div className={styles["username"]}>{username}</div>
+        <div className={styles["clanName"]}>{clanName}</div>
         <div className={styles["pts"]}>{pts} PTS</div>
       </div>
       <div className={styles["ribbon"]}>

@@ -47,19 +47,19 @@ const Rank: FC = () => {
         </div>
         <div className={styles["cards-box"]}>
           <WinnerCard
-            username="DBZS"
+            clanName="DBZS"
             pfp="/images/temp/user-1.png"
             pts={1000}
             rank={{ rank: 3, type: "clan" }}
           />
           <WinnerCard
-            username="Avoid"
+            clanName="Avoid"
             pfp="/images/temp/user-2.png"
             pts={1750}
             rank={{ rank: 1, type: "clan" }}
           />
           <WinnerCard
-            username="Rakuzan"
+            clanName="Rakuzan"
             pfp="/images/temp/user-3.png"
             pts={1240}
             rank={{ rank: 2, type: "clan" }}

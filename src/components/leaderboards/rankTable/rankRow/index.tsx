@@ -1,11 +1,13 @@
 import { Player, Rank } from "@/utils/types";
-import { FC } from "react";
+import { FC, useState } from "react";
 import styles from "../rankTable.module.scss";
 import Image from "next/image";
+import ImageViewModal from "@/components/modal/imageViewModal";
+import { useModal } from "@/contexts/modalProvider";
 
 const RankRow: FC<Player> = ({
   rank,
-  username,
+  clanName,
   emblem,
   role,
   playCount,
@@ -23,47 +25,52 @@ const RankRow: FC<Player> = ({
     3: "gradient-bronze",
   };
 
+  const { openImageViewModal } = useModal();
+
   return (
-    <div
-      className={`${styles["tr"]} ${
-        rank < 4 ? styles[backgroundClass[rank]] : styles["bg-default"]
-      }`}
-    >
-      <div className={styles["rank"]}>
-        {rank < 4 ? (
-          <div className={styles["ribbon"]}>
-            <Image src={`/images/ribbon-sm@${rank}.png`} alt="" fill />
-          </div>
-        ) : (
-          rank
-        )}
-      </div>
-      <div className={styles["name"]}>{username}</div>
-      <div className={styles["emblem"]}>
-        {emblem ? (
-          <div className={styles["pfp"]}>
-            <Image src={emblem} alt="" fill />
-          </div>
-        ) : (
-          <div className={styles["no-image"]}>
-            No
-            <br />
-            Emblem
-          </div>
-        )}
-      </div>
-      <div className={styles["value"]}>{role}</div>
+    <>
       <div
-        className={styles["value"]}
-      >{`${playCount.win} / ${playCount.lose}`}</div>
-      <div className={styles["value"]}>{playCount.winRate}</div>
-      <div className={styles["value"]}>{points}</div>
-      <div
-        className={`${
-          styles[rank < 4 ? hoverClass[rank] : "gradient-normal"]
-        } ${styles["hover"]}`}
-      />
-    </div>
+        className={`${styles["tr"]} ${
+          rank < 4 ? styles[backgroundClass[rank]] : styles["bg-default"]
+        }`}
+      >
+        <div className={styles["rank"]}>
+          {rank < 4 ? (
+            <div className={styles["ribbon"]}>
+              <Image src={`/images/ribbon-sm@${rank}.png`} alt="" fill />
+            </div>
+          ) : (
+            rank
+          )}
+        </div>
+        <div className={styles["name"]}>{clanName}</div>
+        <div className={styles["emblem"]} onClick={() => openImageViewModal()}>
+          {emblem ? (
+            <div className={styles["pfp"]}>
+              <Image src={emblem} alt="" fill />
+            </div>
+          ) : (
+            <div className={styles["no-image"]}>
+              No
+              <br />
+              Emblem
+            </div>
+          )}
+        </div>
+        <div className={styles["value"]}>{role}</div>
+        <div
+          className={styles["value"]}
+        >{`${playCount.win} / ${playCount.lose}`}</div>
+        <div className={styles["value"]}>{playCount.winRate}</div>
+        <div className={styles["value"]}>{points}</div>
+        <div
+          className={`${
+            styles[rank < 4 ? hoverClass[rank] : "gradient-normal"]
+          } ${styles["hover"]}`}
+        />
+      </div>
+      <ImageViewModal imgUrl={emblem} name={""} />
+    </>
   );
 };
 

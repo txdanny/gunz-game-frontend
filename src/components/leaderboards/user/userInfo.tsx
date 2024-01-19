@@ -9,6 +9,7 @@ import RankBox from "./rankBox";
 import ScorePieChart from "../charts/scorePieChart";
 import Image from "next/image";
 import IndividualStats from "./individualStats";
+import MobileTopBanner from "../mobileTopBanner";
 
 const UserInfo: FC = () => {
   const params = useParams();
@@ -21,7 +22,7 @@ const UserInfo: FC = () => {
       {userData && (
         <>
           <RankHeader
-            title={userData.username}
+            title={userData.clanName}
             subTitle={`Level ${userData.level}`}
           />
           <div className={styles["info-content"]}>

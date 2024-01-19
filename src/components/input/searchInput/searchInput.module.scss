@@ -7,6 +7,10 @@
   flex-direction: column;
 
   @media (max-width: 1440px) {
+    width: 200px;
+  }
+
+  @media (max-width: 1080px) {
     width: 240px;
   }
 
