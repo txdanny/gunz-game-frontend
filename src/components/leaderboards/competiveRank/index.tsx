@@ -20,7 +20,7 @@ const CompetitiveRank: FC<CompetitiveRankProps> = () => {
   };
 
   const getDisplayName = (playerData: Player[], index: number) => {
-    return tabParam === "clans"
+    return tabParam === "clans" || tabParam === null
       ? playerData[index].clanName
       : playerData[index].characterName;
   };
@@ -37,7 +37,7 @@ const CompetitiveRank: FC<CompetitiveRankProps> = () => {
               className={`${styles["pfp-box"]} ${styles[rankClassMap[rank]]}`}
             >
               <div className={styles["pfp"]}>
-                {tabParam === "clans" && (
+                {(tabParam === "clans" || tabParam === null) && (
                   <div className={styles["user-img"]}>
                     <Image
                       src={`/images/temp/user-${rank}.png`}

@@ -18,15 +18,16 @@ const RankTable: FC = () => {
   const { players, historys, loadMore } = usePlayerData();
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tabs");
+  console.log("tabs", tabParam);
   const tdData =
-    tabParam === "clans"
+    tabParam === "clans" || tabParam === null
       ? CLANTABLETDS
       : tabParam === "individuals"
       ? INDIVIDUALTABLETDS
       : LADDERTABLETDS;
 
   const renderPlayerRows = () => {
-    if (tabParam === "clans") {
+    if (tabParam === "clans" || tabParam === null) {
       return (
         players &&
         players.map((player, index) => <RankRow {...player} key={index} />)
@@ -50,7 +51,7 @@ const RankTable: FC = () => {
 
   return (
     <>
-      {tabParam !== "history" && (
+      {(tabParam !== "history" || tabParam === null) && (
         <div className={styles["rank-table"]}>
           <div className={styles["table"]}>
             <div className={styles["thead"]}>

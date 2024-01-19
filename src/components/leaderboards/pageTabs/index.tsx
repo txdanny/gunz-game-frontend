@@ -19,7 +19,7 @@ const PageTabs: FC = () => {
         handleTabClick={handleTabClick}
         tabName="clans"
         tabText="clans"
-        active={tabParam === "clans"}
+        active={tabParam === "clans" || tabParam === null}
         rightDisableActiveState={false}
         leftDisableActiveState={tabParam !== "individuals"}
       />
@@ -28,8 +28,8 @@ const PageTabs: FC = () => {
         tabName="individuals"
         tabText="individuals"
         active={tabParam === "individuals"}
-        rightDisableActiveState={tabParam === "clans"}
-        leftDisableActiveState={tabParam !== "clans"}
+        rightDisableActiveState={tabParam === "clans" || tabParam === null}
+        leftDisableActiveState={tabParam !== "clans" && tabParam !== null}
       />
       <PageTabButton
         handleTabClick={handleTabClick}
@@ -38,7 +38,9 @@ const PageTabs: FC = () => {
         active={tabParam === "ladder"}
         rightDisableActiveState={tabParam !== "history"}
         leftDisableActiveState={
-          tabParam !== "individuals" && tabParam !== "clans"
+          tabParam !== "individuals" &&
+          tabParam !== "clans" &&
+          tabParam !== null
         }
       />
       <PageTabButton

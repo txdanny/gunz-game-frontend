@@ -34,7 +34,7 @@ const MobileClansTable: FC<MobileClansTable> = () => {
 
   return (
     <>
-      {tabParam === "clans" && (
+      {(tabParam === "clans" || tabParam === null) && (
         <div className={styles["table"]}>
           {" "}
           <div className={styles["table-content"]}>

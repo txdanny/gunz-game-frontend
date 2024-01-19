@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 40px;
   .title {
     color: white;
     text-shadow: var(--shadow-box-1);
@@ -49,7 +50,7 @@
     background-color: #ffbe1780;
     transform: rotateY(180deg);
     svg {
-        pointer-events: none !important;
+      pointer-events: none !important;
     }
   }
 }
