@@ -1,0 +1,188 @@
+.table {
+  .table-content {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    display: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @media (max-width: 1080px) {
+      display: grid;
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+
+  .user-info {
+    justify-content: center;
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px 0px rgba(24, 39, 75, 0.08),
+      0px 8px 16px 0px rgba(24, 39, 75, 0.12),
+      0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+      0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+
+    @media (max-width: 768px) {
+    }
+  }
+
+  .result-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .point {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-tungsten);
+
+      p {
+        color: #ffbe17;
+        text-align: center;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      span {
+        color: var(--color-primary-300);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 373;
+        line-height: normal;
+      }
+    }
+
+    .name-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+
+      .name {
+        color: rgba(255, 255, 255, 0.9);
+        text-align: center;
+        font-family: var(--font-tungsten);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    .anime {
+      display: flex;
+      padding: 20px 0px;
+      justify-content: center;
+
+      .vs-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+
+        .gun {
+          position: relative;
+          display: flex;
+          width: 40px;
+          height: 27px;
+          padding-top: 26.5px;
+          justify-content: center;
+          align-items: center;
+          filter: drop-shadow(--shadow-box-2);
+        }
+
+        .vs-banner {
+          width: 40px;
+          height: 1px;
+          flex-shrink: 0;
+          background: #997338;
+        }
+
+        p {
+          color: var(--color-primary-50);
+          text-align: center;
+          font-family: var(--font-tungsten);
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .bullet-group {
+          position: relative;
+          display: flex;
+          width: 30px;
+          height: 27px;
+          justify-content: center;
+          align-items: flex-start;
+
+          .bullet {
+            position: absolute;
+            width: 20px;
+            height: 16px;
+            left: 6.66px;
+            bottom: 5px;
+            filter: drop-shadow(--shadow-box-2);
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+
+  .banner {
+    width: 200px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #ffffff40;
+  }
+
+  .map-date-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .map-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        color: white;
+        font-family: var(--font-din-alternate);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      span {
+        color: var(--color-primary-300);
+        font-family: var(--font-tungsten);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 373;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+.bg-default {
+  background: #292c32;
+}
+
+.border-default {
+  border: 4px solid rgba(255, 255, 255, 0.25);
+}

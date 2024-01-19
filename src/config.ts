@@ -76,10 +76,10 @@ export const NAV_LINKS_MOBILE: NavLink[] = [
     title: "Leaderboards",
     url: "#",
     submenu: [
-      { title: "Clans", url: "/leaderboard/clans" },
-      { title: "Individuals", url: "/leaderboard/individuals" },
-      { title: "Ladder", url: "/leaderboard/ladder" },
-      { title: "History", url: "/leaderboard/history" },
+      { title: "Clans", url: "/leaderboards?tabs=clans" },
+      { title: "Individuals", url: "/leaderboards?tabs=individuals" },
+      { title: "Ladder", url: "/leaderboards?tabs=ladder" },
+      { title: "History", url: "/leaderboards?tabs=history" },
     ],
   },
   {
@@ -174,7 +174,7 @@ export const SOCIALS = [
 
 export const CLANTABLETDS = [
   "Rank",
-  "Clan",
+  "Clan Name",
   "Emblem",
   "Leader",
   "Wins / Losers",
@@ -199,13 +199,21 @@ export const LADDERTABLETDS = [
   "Points",
 ];
 
-export const HISTORYTABLETDS = ["Date", "Map", "Winners", "Losers", "Points"];
+export const HISTORYTABLETDS = [
+  "Date",
+  "Map",
+  "Winners",
+  "Points",
+  "Losers",
+  "Points",
+];
 
 export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 1,
-    username: "Legend",
+    clanName: "Legend",
+    characterName: "CJCESAR",
     type: {
       name: "clan",
       rank: 1,
@@ -226,7 +234,8 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 2,
-    username: "Rakuzan",
+    clanName: "Rakuzan",
+    characterName: "cazador007",
     type: {
       name: "clan",
       rank: 1,
@@ -247,7 +256,8 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 3,
-    username: "Armaxr",
+    clanName: "Armaxr",
+    characterName: "AnGeLeSxD",
     type: {
       name: "clan",
       rank: 1,
@@ -268,7 +278,8 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 4,
-    username: "Cyxonse",
+    clanName: "Cyxonse",
+    characterName: "Quest4ever",
     type: {
       name: "clan",
       rank: 1,
@@ -289,7 +300,8 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 5,
-    username: "UltdNation",
+    clanName: "UltdNation",
+    characterName: "NinjaPao",
     type: {
       name: "clan",
       rank: 1,
@@ -310,7 +322,8 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 6,
-    username: "Legion",
+    clanName: "Legion",
+    characterName: "_Master___",
     type: {
       name: "clan",
       rank: 1,
@@ -332,7 +345,8 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 7,
-    username: "DBZS",
+    clanName: "DBZS",
+    characterName: "BongFire",
     type: {
       name: "clan",
       rank: 1,
@@ -353,7 +367,8 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 8,
-    username: "Crusaders",
+    clanName: "Crusaders",
+    characterName: "BongFire",
     type: {
       name: "clan",
       rank: 1,
@@ -374,7 +389,8 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 9,
-    username: "Goojofoq",
+    clanName: "Goojofoq",
+    characterName: "XSfeew",
     type: {
       name: "clan",
       rank: 1,
@@ -395,7 +411,8 @@ export const PLAYERS: Player[] = [
   {
     id: "",
     rank: 10,
-    username: "Capable",
+    clanName: "Capable",
+    characterName: "GDwer",
     type: {
       name: "clan",
       rank: 1,
@@ -422,7 +439,7 @@ export const HISTORYS: History[] = [
     map: "Factory",
     winners: ["fright"],
     firstPoints: 6,
-    losers: "King_WarZ",
+    losers: ["King_WarZ"],
     secondPoints: 5,
   },
   {
@@ -431,16 +448,43 @@ export const HISTORYS: History[] = [
     map: "Prison II",
     winners: ["snuwfersucks"],
     firstPoints: 6,
-    losers: "Mishandelaar",
+    losers: ["Mishandelaar"],
     secondPoints: 5,
   },
   {
     id: "",
     date: "2023-08-12 (4:02 PM EST)",
     map: "Prison II",
-    winners: ["snuwfersucks"],
+    winners: ["ApMagic", "wodalG", "bonedamage"],
     firstPoints: 6,
-    losers: "Mishandelaar",
+    losers: ["Mishandelaar", "MONEYCHAINZ", "Rabid"],
     secondPoints: 5,
+  },
+  {
+    id: "",
+    date: "2022-08-12 (5:02 PM EST)",
+    map: "Prison II",
+    winners: ["ApMagic", "wodalG", "bonedamage"],
+    firstPoints: 6,
+    losers: ["Mishandelaar", "MONEYCHAINZ", "Rabid"],
+    secondPoints: 5,
+  },
+  {
+    id: "",
+    date: "2023-08-12 (4:02 PM EST)",
+    map: "Prison II",
+    winners: ["ApMagic", "wodalG"],
+    firstPoints: 3,
+    losers: ["Mishandelaar", "MONEYCHAINZ"],
+    secondPoints: 6,
+  },
+  {
+    id: "",
+    date: "2023-08-12 (4:02 PM EST)",
+    map: "Prison II",
+    winners: ["wodalG"],
+    firstPoints: 3,
+    losers: ["MONEYCHAINZ"],
+    secondPoints: 6,
   },
 ];

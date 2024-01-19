@@ -3,7 +3,12 @@ import { FC } from "react";
 import styles from "../rankTable.module.scss";
 import Image from "next/image";
 
-const LadderRankRow: FC<Player> = ({ rank, username, playCount, points }) => {
+const LadderRankRow: FC<Player> = ({
+  rank,
+  characterName,
+  playCount,
+  points,
+}) => {
   const backgroundClass: Rank = {
     1: "bg-gold",
     2: "bg-silver",
@@ -31,7 +36,7 @@ const LadderRankRow: FC<Player> = ({ rank, username, playCount, points }) => {
           rank
         )}
       </div>
-      <div className={styles["name"]}>{username}</div>
+      <div className={styles["name"]}>{characterName}</div>
       <div className={styles["value"]}>{`${playCount.win.toLocaleString()} / ${
         playCount.lose
       }`}</div>

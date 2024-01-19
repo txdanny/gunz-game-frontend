@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const IndividualRankRow: FC<Player> = ({
   rank,
-  username,
+  characterName,
   level,
   experience,
   playCount,
@@ -38,7 +38,7 @@ const IndividualRankRow: FC<Player> = ({
           rank
         )}
       </div>
-      <div className={styles["name"]}>{username}</div>
+      <div className={styles["name"]}>{characterName}</div>
       <div className={styles["value"]}>{level}</div>
       <div className={styles["value"]}>{experience.toLocaleString()}</div>
       <div

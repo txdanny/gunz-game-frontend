@@ -24,7 +24,7 @@ export interface Streaming {
 export type RankingTabs = "clans" | "individuals" | "ladder" | "history";
 
 export interface Winner {
-  username: string;
+  clanName: string;
   pfp: string;
   pts: number;
   rank: {
@@ -36,7 +36,8 @@ export interface Winner {
 export interface Player {
   id: string;
   rank: number;
-  username: string;
+  clanName: string;
+  characterName: string;
   type: {
     name: string;
     rank?: number;
@@ -61,6 +62,6 @@ export interface History {
   map: string;
   winners: string[];
   firstPoints: number;
-  losers: string;
+  losers: string[];
   secondPoints: number;
 }
