@@ -23,6 +23,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
     .percent {
       color: white;
       text-align: center;
@@ -32,6 +33,21 @@
       font-style: normal;
       font-weight: bold;
       line-height: normal;
+    }
+  }
+  .circle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .piece {
+      width: 149px;
+      height: 88px;
+      position: absolute;
+      transform-origin: right;
+      top: 50%;
+      left: 0;
     }
   }
 }

@@ -197,5 +197,9 @@
     line-height: normal;
     letter-spacing: 0.4px;
     opacity: 0.75;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
   }
 }

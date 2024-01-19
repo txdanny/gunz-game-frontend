@@ -1,5 +1,6 @@
 import { FC } from "react";
-import styles from "./charts.module.scss";
+import styles from "../charts.module.scss";
+import Piece from "./piece";
 
 interface ChartProps {
   title: string;
@@ -16,6 +17,12 @@ const ScorePieChart: FC<ChartProps> = ({ title, percent, description }) => {
           percent * 100
         )}%`}</div>
         {description}
+
+        <div className={styles["circle"]}>
+          {Array.from({ length: 10 }).map((_, key) => (
+            <Piece index={key} key={key} percent={0.75} />
+          ))}
+        </div>
       </div>
     </div>
   );
