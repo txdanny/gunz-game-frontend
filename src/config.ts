@@ -1,4 +1,4 @@
-import { NavLink, Player, Streaming, History } from "@/utils/types";
+import { NavLink, Player, Streaming, History, Competive } from "@/utils/types";
 
 export const API_URL = process.env.NEXT_PUBLIC_API_URL
   ? process.env.NEXT_PUBLIC_API_URL
@@ -206,6 +206,14 @@ export const HISTORYTABLETDS = [
   "Points",
   "Losers",
   "Points",
+];
+
+export const COMPETIVETABLETDS = [
+  { title: "Name", icon: "/icons/union.png" },
+  { title: "Level", icon: "/icons/level.png" },
+  { title: "Rank", icon: "/icons/chevron.png" },
+  { title: "Points", icon: "/icons/star.png" },
+  { title: "Join Date", icon: "/icons/calendar.png" },
 ];
 
 export const PLAYERS: Player[] = [
@@ -486,5 +494,72 @@ export const HISTORYS: History[] = [
     firstPoints: 3,
     losers: ["MONEYCHAINZ"],
     secondPoints: 6,
+  },
+];
+
+export const COMPETIVES: Competive[] = [
+  {
+    id: "",
+    name: "Strike",
+    level: 79,
+    rank: "Master",
+    points: 1590,
+    joinDate: "31/07/2020",
+  },
+  {
+    id: "",
+    name: "Cessation",
+    level: 71,
+    rank: "Admin",
+    points: 1590,
+    joinDate: "02/08/2020",
+  },
+  {
+    id: "",
+    name: "Command",
+    level: 65,
+    rank: "Member",
+    points: 606,
+    joinDate: "31/07/2020",
+  },
+  {
+    id: "",
+    name: "Ask420",
+    level: 79,
+    rank: "Master",
+    points: 1590,
+    joinDate: "31/07/2020",
+  },
+  {
+    id: "",
+    name: "Korra",
+    level: 79,
+    rank: "Master",
+    points: 1590,
+    joinDate: "31/07/2020",
+  },
+  {
+    id: "",
+    name: "Simp",
+    level: 79,
+    rank: "Master",
+    points: 1590,
+    joinDate: "31/07/2020",
+  },
+  {
+    id: "",
+    name: "Derange",
+    level: 79,
+    rank: "Master",
+    points: 1590,
+    joinDate: "31/07/2020",
+  },
+  {
+    id: "",
+    name: "LexTalionis",
+    level: 79,
+    rank: "Master",
+    points: 1590,
+    joinDate: "31/07/2020",
   },
 ];

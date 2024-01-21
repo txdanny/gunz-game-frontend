@@ -65,3 +65,12 @@ export interface History {
   losers: string[];
   secondPoints: number;
 }
+
+export interface Competive {
+  id: string;
+  name: string;
+  level: number;
+  rank: string;
+  points: number;
+  joinDate: string;
+}

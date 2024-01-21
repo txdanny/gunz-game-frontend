@@ -1,5 +1,4 @@
 .pie-chart {
-  margin-top: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,6 +33,10 @@
       font-style: normal;
       font-weight: bold;
       line-height: 0.8;
+    }
+
+    @media (max-width: 1080px) {
+      transform: scale(0.8);
     }
   }
   .circle-bg {

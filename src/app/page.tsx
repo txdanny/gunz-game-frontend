@@ -6,7 +6,6 @@ import ZCoins from "@/components/landing/zCoins";
 import Rank from "@/components/landing/rank";
 import GunzVip from "@/components/landing/gunzVip";
 import Community from "@/components/landing/community";
-import ImageViewModal from "@/components/modal/imageViewModal";
 
 export const metadata: Metadata = {
   title: "Home | GunZ Website",
