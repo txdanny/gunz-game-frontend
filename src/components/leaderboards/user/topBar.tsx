@@ -2,10 +2,14 @@ import { FC } from "react";
 import styles from "./user.module.scss";
 import { PiUserFill } from "react-icons/pi";
 
-const UserDetailTopBar: FC = () => {
+interface UserDetailTopBarProps {
+  title: string;
+}
+
+const UserDetailTopBar: FC<UserDetailTopBarProps> = ({ title }) => {
   return (
     <div className={styles["topbar"]}>
-      Player Information <PiUserFill className={styles["icon"]} />
+      {title} Information <PiUserFill className={styles["icon"]} />
     </div>
   );
 };

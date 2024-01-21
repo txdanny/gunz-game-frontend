@@ -6,10 +6,11 @@ import styles from "../../leaderboards.module.scss";
 import BackToHome from "@/components/leaderboards/user/backButton";
 import UserDetailTopBar from "@/components/leaderboards/user/topBar";
 import UserInfo from "@/components/leaderboards/user/userInfo";
-import ImageViewModal from "@/components/modal/imgViewModal";
+import ClanInfo from "@/components/leaderboards/user/clanInfo";
+import CompetiveTable from "@/components/leaderboards/competiveTable";
 
 export const metadata: Metadata = {
-  title: "User Detail | GunZ Website",
+  title: "Clan Detail | GunZ Website",
   description: "",
 };
 
@@ -28,7 +29,8 @@ export default function Ranking() {
         <div className={styles["container"]}>
           <BackToHome url="/leaderboards" title="back to leaderboard" />
           <UserDetailTopBar title={"Clan"} />
-          <UserInfo />
+          <ClanInfo />
+          <CompetiveTable />
         </div>
       </PageWithBg>
     </MainPageLayout>

@@ -1,24 +1,19 @@
 "use client";
-import { FC, useState } from "react";
+import { FC } from "react";
 import styles from "./rankTable.module.scss";
 import { usePlayerData } from "@/hooks/usePlayerData";
 import RankRow from "./rankRow";
 import LoadMoreButton from "@/components/button/loadMoreButton";
-import {
-  CLANTABLETDS,
-  HISTORYTABLETDS,
-  INDIVIDUALTABLETDS,
-  LADDERTABLETDS,
-} from "@/config";
+import { CLANTABLETDS, INDIVIDUALTABLETDS, LADDERTABLETDS } from "@/config";
 import { useSearchParams } from "next/navigation";
 import IndividualRankRow from "./individualRankRow";
 import LadderRankRow from "./ladderRankRow";
+import ImageViewModal from "@/components/modal/imgViewModal";
 
 const RankTable: FC = () => {
-  const { players, historys, loadMore } = usePlayerData();
+  const { players, loadMore } = usePlayerData();
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tabs");
-  console.log("tabs", tabParam);
   const tdData =
     tabParam === "clans" || tabParam === null
       ? CLANTABLETDS
@@ -70,6 +65,7 @@ const RankTable: FC = () => {
           </div>
         </div>
       )}
+      <ImageViewModal imgUrl={""} name={""} />
     </>
   );
 };
