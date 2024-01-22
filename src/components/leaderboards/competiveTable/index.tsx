@@ -3,17 +3,12 @@ import { FC } from "react";
 import Image from "next/image";
 import styles from "./competiveTable.module.scss";
 import { usePlayerData } from "@/hooks/usePlayerData";
-import { useSearchParams } from "next/navigation";
 import { COMPETIVETABLETDS } from "@/config";
 import CompetiveRow from "./competiveRow";
 import Pagination from "@mui/material/Pagination";
-import UsePagination from "./pagination";
-import PaginationItem from "@mui/material/PaginationItem";
 
 const CompetiveTable: FC = () => {
-  const { competives, loadMore } = usePlayerData();
-  const searchParams = useSearchParams();
-  const tabParam = searchParams.get("tabs");
+  const { competives } = usePlayerData();
 
   return (
     <div className={styles["competive-table"]}>
@@ -38,19 +33,7 @@ const CompetiveTable: FC = () => {
             ))}
         </div>
         <div className={styles["pagination-content"]}>
-          <Pagination
-            count={5}
-            shape="rounded"
-            // renderItem={(item) => (
-            //   <PaginationItem
-            //     slots={{
-            //       previous: () => <h1>Previous</h1>,
-            //       next: () => <h1>Next</h1>,
-            //     }}
-            //     {...item}
-            //   />
-            // )}
-          />
+          <Pagination count={5} shape="rounded" />
         </div>
       </div>
     </div>

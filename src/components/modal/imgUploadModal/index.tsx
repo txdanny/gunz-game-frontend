@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./imgUploadModal.module.scss";
 import { useModal } from "@/contexts/modalProvider";
 import Cropper from "react-easy-crop";
+import { useLockedBody } from "@/hooks/useLockedBody";
 interface ImgUploadModalProps {
   imgUrl: string | null | undefined;
   name: string;
@@ -18,48 +19,55 @@ const ImgUploadModal: FC<ImgUploadModalProps> = ({ imgUrl, name }) => {
 
   if (!isOpenImgUploadModal) return null;
   return (
-    <div className={styles["modal"]}>
-      <div className={styles["modal-content"]}>
-        <p>Edit Clan Emblem</p>
-        <div className={styles["cropper"]}>
-          <Cropper
-            image={imgUploadUrl.toString()}
-            crop={crop}
-            zoom={zoom}
-            aspect={4 / 3}
-            onCropChange={setCrop}
-            onCropComplete={onCropComplete}
-            onZoomChange={setZoom}
-          />
-        </div>
-        <div className={styles["controls"]}>
-          <div className={styles["zoomOut"]}>
-            <Image fill alt="" src="/icons/zoomOut.svg" />
+    <>
+      {isOpenImgUploadModal && (
+        <div className={styles["modal"]}>
+          <div className={styles["modal-content"]}>
+            <p>Edit Clan Emblem</p>
+            <div className={styles["cropper"]}>
+              <Cropper
+                image={imgUploadUrl.toString()}
+                crop={crop}
+                zoom={zoom}
+                aspect={4 / 3}
+                onCropChange={setCrop}
+                onCropComplete={onCropComplete}
+                onZoomChange={setZoom}
+              />
+            </div>
+            <div className={styles["controls"]}>
+              <div className={styles["zoomOut"]}>
+                <Image fill alt="" src="/icons/zoomOut.svg" />
+              </div>
+              <input
+                type="range"
+                value={zoom}
+                min={1}
+                max={3}
+                step={0.1}
+                aria-labelledby="Zoom"
+                onChange={(e) => {
+                  setZoom(Number(e.target.value));
+                }}
+                className={styles["zoom-range"]}
+              />
+              <div className={styles["zoomIn"]}>
+                <Image fill alt="" src="/icons/zoomIn.svg" />
+              </div>
+            </div>
+            <div className={styles["action"]}>
+              <div
+                className={styles["btn-cancel"]}
+                onClick={closeImgUploadModal}
+              >
+                Cancel
+              </div>
+              <div className={styles["btn-save"]}>Save</div>
+            </div>
           </div>
-          <input
-            type="range"
-            value={zoom}
-            min={1}
-            max={3}
-            step={0.1}
-            aria-labelledby="Zoom"
-            onChange={(e) => {
-              setZoom(Number(e.target.value));
-            }}
-            className={styles["zoom-range"]}
-          />
-          <div className={styles["zoomIn"]}>
-            <Image fill alt="" src="/icons/zoomIn.svg" />
-          </div>
         </div>
-        <div className={styles["action"]}>
-          <div className={styles["btn-cancel"]} onClick={closeImgUploadModal}>
-            Cancel
-          </div>
-          <div className={styles["btn-save"]}>Save</div>
-        </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 

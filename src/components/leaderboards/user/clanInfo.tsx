@@ -6,19 +6,14 @@ import useUserData from "@/hooks/useUserData";
 import styles from "./user.module.scss";
 import RankBox from "./rankBox";
 import ScorePieChart from "../charts/scorePieChart";
-import Image from "next/image";
-import IndividualStats from "./individualStats";
 import ClanStats from "./clanStats";
 import ImgUpload from "@/components/imgUpload";
 import ImgUploadModal from "@/components/modal/imgUploadModal";
-import ImageViewModal from "@/components/modal/imgViewModal";
 
 const ClanInfo: FC = () => {
   const params = useParams();
   const { userData } = useUserData(params.userId as string);
-  const killRatio =
-    userData.playCount.kills /
-    (userData.playCount.kills + userData.playCount.deaths);
+
   return (
     <div className={styles["clan-user-info"]}>
       {userData && (
@@ -32,7 +27,10 @@ const ClanInfo: FC = () => {
             <div className={styles["chart"]}>
               <ScorePieChart
                 title="Current Kill / Death Ratio"
-                percent={killRatio}
+                percent={
+                  userData.playCount.kills /
+                  (userData.playCount.kills + userData.playCount.deaths)
+                }
                 description={
                   <p className={styles["chart-description"]}>
                     <span>K/D</span>

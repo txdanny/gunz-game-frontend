@@ -65,7 +65,7 @@ const RankTable: FC = () => {
           </div>
         </div>
       )}
-      <ImageViewModal imgUrl={""} name={""} />
+      <ImageViewModal />
     </>
   );
 };

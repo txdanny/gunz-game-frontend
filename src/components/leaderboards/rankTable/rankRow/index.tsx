@@ -5,6 +5,7 @@ import Image from "next/image";
 import ImageViewModal from "@/components/modal/imgViewModal";
 import { useModal } from "@/contexts/modalProvider";
 import Link from "next/link";
+import { useLockedBody } from "@/hooks/useLockedBody";
 
 const RankRow: FC<Player> = ({
   rank,
@@ -53,9 +54,7 @@ const RankRow: FC<Player> = ({
         </Link>
         <div
           className={styles["emblem"]}
-          onClick={() => {
-            openImgViewModal(emblem, clanName);
-          }}
+          onClick={() => openImgViewModal(emblem, clanName)}
         >
           {emblem ? (
             <div className={styles["pfp"]}>
