@@ -11,7 +11,7 @@ interface HeaderProps {
 
 const RankHeader: FC<HeaderProps> = ({ title, subTitle }) => {
   const searchParams = useSearchParams();
-  const tabParam = searchParams.get("tabs") as string;
+  const tabParam = searchParams?.get("tabs") as string;
 
   let titleText = title;
 

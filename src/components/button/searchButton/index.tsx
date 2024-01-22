@@ -10,14 +10,7 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-const SearchButton: FC<ButtonProps> = ({
-  title,
-  name,
-  rank,
-  className,
-  style,
-  onClick,
-}) => {
+const SearchButton: FC<ButtonProps> = ({ title, name, rank }) => {
   return (
     <div className={`${styles["search"]}`}>
       <div className={`${styles["gradient-normal"]} ${styles["hover"]}`} />
