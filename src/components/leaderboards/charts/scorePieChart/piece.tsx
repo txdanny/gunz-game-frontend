@@ -1,7 +1,6 @@
 import { FC } from "react";
 import styles from "../charts.module.scss";
 import Image from "next/image";
-import { PieChart } from "@mui/x-charts/PieChart";
 
 interface Props {
   index: number;
