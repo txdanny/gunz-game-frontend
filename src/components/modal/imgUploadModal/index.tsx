@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./imgUploadModal.module.scss";
 import { useModal } from "@/contexts/modalProvider";
 import Cropper from "react-easy-crop";
-import { useLockedBody } from "@/hooks/useLockedBody";
+
 interface ImgUploadModalProps {
   imgUrl: string | null | undefined;
   name: string;

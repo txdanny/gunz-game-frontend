@@ -28,15 +28,6 @@ export const ModalContext = createContext<ModalContextType | undefined>(
   undefined
 );
 
-export function useModal() {
-  const context = useContext(ModalContext);
-
-  if (!context) {
-    throw new Error("useModal must be used within a ModalProvider");
-  }
-  return context;
-}
-
 interface ModalProviderProps {
   children: ReactNode;
 }
@@ -104,4 +95,13 @@ export function ModalProvider({ children }: ModalProviderProps) {
       {children}
     </ModalContext.Provider>
   );
+}
+
+export function useModal() {
+  const context = useContext(ModalContext);
+
+  if (!context) {
+    throw new Error("useModal must be used within a ModalProvider");
+  }
+  return context;
 }
