@@ -1,4 +1,3 @@
-import { Rank } from "@/utils/types";
 import Image from "next/image";
 import { FC } from "react";
 import styles from "./user.module.scss";
