@@ -1,11 +1,10 @@
 "use client";
 import { FC } from "react";
-import Image from "next/image";
 import styles from "./competiveTable.module.scss";
 import { usePlayerData } from "@/hooks/usePlayerData";
-import { COMPETIVETABLETDS } from "@/config";
 import CompetiveRow from "./competiveRow";
 import Pagination from "@mui/material/Pagination";
+import CompetiveHeader from "./coompetiveHeader";
 
 const CompetiveTable: FC = () => {
   const { competives } = usePlayerData();
@@ -14,16 +13,7 @@ const CompetiveTable: FC = () => {
     <div className={styles["competive-table"]}>
       <div className={styles["table"]}>
         <div className={styles["thead"]}>
-          <div className={styles["tr"]}>
-            {COMPETIVETABLETDS.map((td, index) => (
-              <div className={styles["td"]} key={index}>
-                <span>{td.title}</span>
-                <div className={styles["icon"]}>
-                  <Image fill alt="" src={td.icon} />
-                </div>
-              </div>
-            ))}
-          </div>
+          <CompetiveHeader />
         </div>
         <div className={styles["tbody"]}>
           {" "}
