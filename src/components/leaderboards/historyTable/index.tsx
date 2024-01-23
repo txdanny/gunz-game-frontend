@@ -3,9 +3,9 @@ import { FC } from "react";
 import styles from "./historyTable.module.scss";
 import { usePlayerData } from "@/hooks/usePlayerData";
 import LoadMoreButton from "@/components/button/loadMoreButton";
-import { HISTORYTABLETDS } from "@/config";
 import { useSearchParams } from "next/navigation";
 import HistoryRow from "./historyRow";
+import HistoryHeader from "./historyHeader";
 
 const HistoryTable: FC = () => {
   const { historys, loadMore } = usePlayerData();
@@ -18,13 +18,7 @@ const HistoryTable: FC = () => {
         <div className={styles["history-table"]}>
           <div className={styles["table"]}>
             <div className={styles["thead"]}>
-              <div className={styles["tr"]}>
-                {HISTORYTABLETDS.map((td, index) => (
-                  <div className={styles["td"]} key={index}>
-                    {td}
-                  </div>
-                ))}
-              </div>
+              <HistoryHeader />
             </div>
             <div className={styles["tbody"]}>
               {" "}

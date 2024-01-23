@@ -18,7 +18,7 @@ const HeroBanner: FC = () => {
           <br />
           and reflexes to the limit.
         </h2>
-        <DownloadButton />
+        <DownloadButton title={"DOWNLOAD FOR FREE"} showIcon={true} />
       </div>
     </section>
   );

@@ -2,7 +2,11 @@ import Image from "next/image";
 import { FC } from "react";
 import styles from "./heroBanner.module.scss";
 
-const DownloadButton: FC = () => {
+interface DownloadButtonProps {
+  title: string;
+  showIcon: boolean;
+}
+const DownloadButton: FC<DownloadButtonProps> = ({ title, showIcon }) => {
   return (
     <>
       <button className={styles["btn-download"]}>
@@ -24,8 +28,10 @@ const DownloadButton: FC = () => {
         </div>
 
         <div className={styles["text"]}>
-          <Image src={"/icons/windows.svg"} width={30} height={30} alt="" />
-          download for free
+          {showIcon && (
+            <Image src={"/icons/windows.svg"} width={30} height={30} alt="" />
+          )}
+          {title}
         </div>
         <div className={styles["bg-shadow"]} />
       </button>
@@ -47,7 +53,8 @@ const DownloadButton: FC = () => {
           />
         </div>
 
-        <div className={styles["text"]}>play for free</div>
+        {!showIcon && <div className={styles["text"]}>{title}</div>}
+        {showIcon && <div className={styles["text"]}>play for free</div>}
       </button>
     </>
   );

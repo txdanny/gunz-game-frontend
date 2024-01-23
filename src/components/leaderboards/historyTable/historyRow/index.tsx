@@ -1,4 +1,4 @@
-import { History, Rank } from "@/utils/types";
+import { History } from "@/utils/types";
 import { FC } from "react";
 import styles from "../historyTable.module.scss";
 
