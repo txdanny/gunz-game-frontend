@@ -4,19 +4,26 @@ import Link from "next/link";
 import styles from "../rankTable.module.scss";
 import { useModal } from "@/contexts/modalProvider";
 
-interface Props {
+type Props = {
   isClansTab: boolean;
   tabParam: string | null;
   clanName: string;
   name: string;
   emblem: string | null | undefined;
-  playCount: any;
+  playCount: {
+    win: number;
+    lose: number;
+    kills: number;
+    deaths: number;
+    winRate: number;
+  };
   characterName: string;
   level: number;
   experience: number;
   role: string;
   pointsData: string | number;
-}
+};
+
 const PlayersTd: FC<Props> = ({
   isClansTab,
   tabParam,
