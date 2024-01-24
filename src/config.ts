@@ -225,7 +225,7 @@ export const COMPETIVETABLETDS = [
   { title: "Join Date", icon: "/icons/calendar.png" },
 ];
 
-export const SHOWRANKAVATARLIMIT = 4;
+export const SHOW_RANK_AVATAR_LIMIT = 4;
 
 export const DOWNLOADBUTTONTITLES = ["DOWNLOAD FOR FREE"];
 
