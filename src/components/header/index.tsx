@@ -8,7 +8,6 @@ import ImageButtonSm from "../button/imageButtonSm";
 import NavLinks from "./navLinks";
 import styles from "./header.module.scss";
 import MobileHeader from "./mobileHeader";
-import ImageViewModal from "../modal/imgViewModal";
 
 const Header: FC = () => {
   return (
