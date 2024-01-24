@@ -225,6 +225,10 @@ export const COMPETIVETABLETDS = [
   { title: "Join Date", icon: "/icons/calendar.png" },
 ];
 
+export const SHOWRANKAVATARLIMIT = 4;
+
+export const DOWNLOADBUTTONTITLES = ["DOWNLOAD FOR FREE"];
+
 export const PLAYERS: Player[] = [
   {
     id: "",

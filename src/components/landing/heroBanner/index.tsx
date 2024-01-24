@@ -2,6 +2,7 @@ import { FC } from "react";
 import styles from "./heroBanner.module.scss";
 import Image from "next/image";
 import DownloadButton from "./downloadButton";
+import { DOWNLOADBUTTONTITLES } from "@/config";
 
 const HeroBanner: FC = () => {
   return (
@@ -18,7 +19,7 @@ const HeroBanner: FC = () => {
           <br />
           and reflexes to the limit.
         </h2>
-        <DownloadButton title={"DOWNLOAD FOR FREE"} showIcon={true} />
+        <DownloadButton title={DOWNLOADBUTTONTITLES[0]} showIcon={true} />
       </div>
     </section>
   );

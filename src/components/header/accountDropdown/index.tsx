@@ -4,6 +4,7 @@ import { ArrowDown, UserIcon } from "@/components/svgItems";
 import { FC } from "react";
 import styles from "./accountDropdown.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const AccountDropdown: FC = () => {
   // const { data: session } = useSession();
@@ -36,18 +37,20 @@ const AccountDropdown: FC = () => {
                 </div>
                 <div className={styles["log-in-bg"]} />
               </li>
-              <li className={styles["sign-up"]}>
-                <div className={styles["list-title"]}>
-                  Sign Up
-                  <Image
-                    src={"/icons/signup.svg"}
-                    width={17}
-                    height={17}
-                    alt=""
-                  />
-                </div>
-                <div className={styles["sign-up-bg"]} />
-              </li>
+              <Link href={"/signup"}>
+                <li className={styles["sign-up"]}>
+                  <div className={styles["list-title"]}>
+                    Sign Up
+                    <Image
+                      src={"/icons/signup.svg"}
+                      width={17}
+                      height={17}
+                      alt=""
+                    />
+                  </div>
+                  <div className={styles["sign-up-bg"]} />
+                </li>
+              </Link>
             </>
           ) : (
             <>
