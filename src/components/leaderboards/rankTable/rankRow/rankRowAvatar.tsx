@@ -2,13 +2,13 @@ import { Player } from "@/utils/types";
 import { FC } from "react";
 import styles from "../rankTable.module.scss";
 import Image from "next/image";
-import { SHOWRANKAVATARLIMIT } from "@/config";
+import { SHOW_RANK_AVATAR_LIMIT } from "@/config";
 
 interface Props {
   rank: number;
 }
 const RankRowAvatar: FC<Props> = ({ rank }) => {
-  const showRankAvatar = rank < SHOWRANKAVATARLIMIT;
+  const showRankAvatar = rank < SHOW_RANK_AVATAR_LIMIT;
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import styles from "./rankTable.module.scss";
 import { CLANTABLETDS, INDIVIDUALTABLETDS, LADDERTABLETDS } from "@/config";
 import { useSearchParams } from "next/navigation";
@@ -7,20 +7,22 @@ enum TabParam {
   Clans = "clans",
   Individuals = "individuals",
   Ladder = "ladder",
-  History = "history",
-  Undefined = "",
 }
 
 const RankTr: FC = () => {
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tabs") as TabParam;
+  const [tdData, setTdData] = useState(CLANTABLETDS);
 
-  let tdData = CLANTABLETDS;
-  if (tabParam === TabParam.Individuals) {
-    tdData = INDIVIDUALTABLETDS;
-  } else if (tabParam === TabParam.Ladder) {
-    tdData = LADDERTABLETDS;
-  }
+  useEffect(() => {
+    if (tabParam === TabParam.Individuals) {
+      setTdData(INDIVIDUALTABLETDS);
+    } else if (tabParam === TabParam.Ladder) {
+      setTdData(LADDERTABLETDS);
+    } else {
+      setTdData(CLANTABLETDS);
+    }
+  }, [searchParams, tabParam]);
 
   return (
     <div className={styles.tr}>
