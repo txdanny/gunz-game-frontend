@@ -5,6 +5,9 @@ import Image from "next/image";
 import { useModal } from "@/contexts/modalProvider";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import RankRowAvatar from "./rankRowAvatar";
+import { PLAYERS } from "@/config";
+import PlayersTd from "./playersTd";
 
 const RankRow: FC<Player> = ({
   rank,
@@ -17,7 +20,6 @@ const RankRow: FC<Player> = ({
   experience,
   level,
 }) => {
-  const { openImgViewModal } = useModal();
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tabs");
 
@@ -33,11 +35,20 @@ const RankRow: FC<Player> = ({
     3: "gradient-bronze",
   };
 
-  const isClansTab = tabParam === "clans" || tabParam === null;
+  enum TabParam {
+    Clans = "clans",
+    Individuals = "individuals",
+    Ladder = "ladder",
+    History = "history",
+    Undefined = "",
+  }
+
+  const isClansTab =
+    tabParam === TabParam.Clans || tabParam === TabParam.Undefined;
 
   const name = isClansTab ? clanName : characterName;
   const pointsData =
-    isClansTab || tabParam === "ladder"
+    isClansTab || tabParam === TabParam.Ladder
       ? points
       : (playCount.kills / playCount.deaths).toFixed(2);
 
@@ -48,82 +59,20 @@ const RankRow: FC<Player> = ({
           rank < 4 ? styles[backgroundClass[rank]] : styles["bg-default"]
         }`}
       >
-        <div className={styles["rank"]}>
-          {rank < 4 ? (
-            <div className={styles["ribbon"]}>
-              <Image src={`/images/ribbon-sm@${rank}.png`} alt="" fill />
-            </div>
-          ) : (
-            rank
-          )}
-        </div>
-        {isClansTab && (
-          <Link
-            href={`/leaderboards/clan/${clanName}`}
-            passHref
-            className={styles["name"]}
-          >
-            <div className={styles["name"]}>{name}</div>
-          </Link>
-        )}
-        {(tabParam === "individuals" || tabParam === "ladder") && (
-          <div className={styles["name"]}>
-            <div className={styles["name"]}>{characterName}</div>
-          </div>
-        )}
-        {isClansTab && (
-          <div
-            className={styles["emblem"]}
-            onClick={() => openImgViewModal(emblem, clanName)}
-          >
-            {emblem ? (
-              <div className={styles["pfp"]}>
-                <Image src={emblem} alt="" fill />
-              </div>
-            ) : (
-              <div className={styles["no-image"]}>
-                No
-                <br />
-                Emblem
-              </div>
-            )}
-          </div>
-        )}
-        {isClansTab && (
-          <Link
-            href={`/leaderboards/user/${clanName}`}
-            passHref
-            className={styles["value"]}
-          >
-            <div className={styles["value"]}>{role}</div>
-          </Link>
-        )}
-        {tabParam === "individuals" && (
-          <div className={styles["value"]}>{level}</div>
-        )}
-
-        {tabParam !== "individuals" && (
-          <div
-            className={styles["value"]}
-          >{`${playCount.win.toLocaleString()} / ${playCount.lose}`}</div>
-        )}
-
-        {tabParam == "individuals" && (
-          <div className={styles["value"]}>{experience.toLocaleString()}</div>
-        )}
-
-        {tabParam == "individuals" && (
-          <div
-            className={styles["value"]}
-          >{`${playCount.kills.toLocaleString()} / ${playCount.deaths.toLocaleString()}`}</div>
-        )}
-        {tabParam !== "individuals" && (
-          <div className={styles["value"]}>
-            {playCount.winRate.toLocaleString() + "%"}
-          </div>
-        )}
-
-        <div className={styles["value"]}>{pointsData}</div>
+        <RankRowAvatar rank={rank} />
+        <PlayersTd
+          isClansTab={isClansTab}
+          tabParam={tabParam}
+          playCount={playCount}
+          emblem={emblem}
+          clanName={clanName}
+          name={name}
+          characterName={characterName}
+          role={role}
+          pointsData={pointsData}
+          level={level}
+          experience={experience}
+        />
         <div
           className={`${
             styles[rank < 4 ? hoverClass[rank] : "gradient-normal"]

@@ -74,3 +74,23 @@ export interface Competive {
   points: number;
   joinDate: string;
 }
+
+export interface News {
+  id: number;
+  imgUrl: string;
+  date: string;
+  dataType: number;
+  title: string;
+  content: string[];
+}
+
+export interface Install {
+  tool: string;
+  firstOption: string;
+  secondOption: string;
+}
+
+export interface Faq {
+  question: string;
+  answer: string[];
+}
