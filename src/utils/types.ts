@@ -1,13 +1,13 @@
-export interface SubMenu {
+export type SubMenu = {
   title: string;
   url: string;
-}
+};
 
-export interface NavLink {
+export type NavLink = {
   title: string;
   url: string;
   submenu?: SubMenu[];
-}
+};
 
 export type Rank = {
   1: string;
@@ -16,14 +16,14 @@ export type Rank = {
   [key: number]: string; // Add this line
 };
 
-export interface Streaming {
+export type Streaming = {
   channelID: string;
   brand: string;
-}
+};
 
 export type RankingTabs = "clans" | "individuals" | "ladder" | "history";
 
-export interface Winner {
+export type Winner = {
   clanName: string;
   pfp: string;
   pts: number;
@@ -31,9 +31,9 @@ export interface Winner {
     type: string;
     rank: 1 | 2 | 3;
   };
-}
+};
 
-export interface Player {
+export type Player = {
   id: string;
   rank: number;
   clanName: string;
@@ -54,9 +54,9 @@ export interface Player {
   level: number;
   points: number;
   experience: number;
-}
+};
 
-export interface History {
+export type History = {
   id: string;
   date: string;
   map: string;
@@ -64,33 +64,33 @@ export interface History {
   firstPoints: number;
   losers: string[];
   secondPoints: number;
-}
+};
 
-export interface Competive {
+export type Competive = {
   id: string;
   name: string;
   level: number;
   rank: string;
   points: number;
   joinDate: string;
-}
+};
 
-export interface News {
+export type News = {
   id: number;
   imgUrl: string;
   date: string;
   dataType: number;
   title: string;
   content: string[];
-}
+};
 
-export interface Install {
+export type Install = {
   tool: string;
   firstOption: string;
   secondOption: string;
-}
+};
 
-export interface Faq {
+export type Faq = {
   question: string;
   answer: string[];
-}
+};

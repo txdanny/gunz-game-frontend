@@ -52,6 +52,20 @@ const RankRow: FC<Player> = ({
       ? points
       : (playCount.kills / playCount.deaths).toFixed(2);
 
+  const playersTdProps = {
+    isClansTab,
+    tabParam,
+    playCount,
+    emblem,
+    clanName,
+    name,
+    characterName,
+    role,
+    pointsData,
+    level,
+    experience,
+  };
+
   return (
     <>
       <div
@@ -60,19 +74,7 @@ const RankRow: FC<Player> = ({
         }`}
       >
         <RankRowAvatar rank={rank} />
-        <PlayersTd
-          isClansTab={isClansTab}
-          tabParam={tabParam}
-          playCount={playCount}
-          emblem={emblem}
-          clanName={clanName}
-          name={name}
-          characterName={characterName}
-          role={role}
-          pointsData={pointsData}
-          level={level}
-          experience={experience}
-        />
+        <PlayersTd {...playersTdProps} />
         <div
           className={`${
             styles[rank < 4 ? hoverClass[rank] : "gradient-normal"]
