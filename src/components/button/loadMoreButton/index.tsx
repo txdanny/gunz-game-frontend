@@ -1,10 +1,10 @@
 import { FC } from "react";
 import styles from "./loadMoreButton.module.scss";
 
-interface Props {
+type Props = {
   title?: string;
   onClick?: () => void;
-}
+};
 
 const LoadMoreButton: FC<Props> = ({ title = "Load More", onClick }) => {
   return (

@@ -1,10 +1,10 @@
 import { FC } from "react";
 
-interface IconProps {
+type IconProps = {
   color?: string;
   className?: string;
   subClassName?: string;
-}
+};
 
 export const ArrowDown: FC<IconProps> = ({
   className = "",

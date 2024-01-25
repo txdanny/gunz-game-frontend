@@ -44,7 +44,7 @@ const RankHeader: FC<HeaderProps> = ({ title, subTitle }) => {
         />
       </div>
       <div className={styles["header-title"]}>
-        <h2>{titleText}</h2>
+        <h2 id="titleText">{titleText}</h2>
         {subTitle && <p>{subTitle}</p>}
       </div>
     </div>

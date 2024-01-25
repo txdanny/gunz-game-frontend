@@ -53,8 +53,7 @@ const DownloadButton: FC<DownloadButtonProps> = ({ title, showIcon }) => {
           />
         </div>
 
-        {!showIcon && <div className={styles["text"]}>{title}</div>}
-        {showIcon && <div className={styles["text"]}>play for free</div>}
+        <div className={styles["text"]}>{title}</div>
       </button>
     </>
   );

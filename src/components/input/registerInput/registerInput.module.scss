@@ -1,0 +1,32 @@
+.input-content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  .label {
+    color: white;
+    font-family: var(--font-din-alternate);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px; /* 150% */
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+  }
+
+  .value {
+    width: 458px;
+    height: 40.5px;
+    outline: none;
+    border: none;
+    color: white;
+    padding: 2px 0px;
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-primary-50);
+    font-family: var(--font-montserrat);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
