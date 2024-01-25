@@ -5,7 +5,6 @@ import Image from "next/image";
 import styles from "../../leaderboards.module.scss";
 import BackToHome from "@/components/leaderboards/user/backButton";
 import UserDetailTopBar from "@/components/leaderboards/user/topBar";
-import UserInfo from "@/components/leaderboards/user/userInfo";
 import ClanInfo from "@/components/leaderboards/user/clanInfo";
 import CompetiveTable from "@/components/leaderboards/competiveTable";
 
