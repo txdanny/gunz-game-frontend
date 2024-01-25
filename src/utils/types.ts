@@ -79,7 +79,7 @@ export type News = {
   id: number;
   imgUrl: string;
   date: string;
-  dataType: number;
+  dataType: string;
   title: string;
   content: string[];
 };

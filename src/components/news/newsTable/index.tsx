@@ -4,22 +4,29 @@ import styles from "./newsTable.module.scss";
 import NewsCard from "./newsCard";
 import LoadMoreButton from "@/components/button/loadMoreButton";
 import NewsSeenAll from "../newsSeenAll";
-import { NEWS } from "@/config";
+import { NEWS, NEWSTYPE } from "@/config";
 import { useSearchParams } from "next/navigation";
 
 const NewsTable: FC = () => {
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tabs");
 
+  enum TabParam {
+    LATEST = "latest",
+    ANNOUNCEMENTS = "announcements",
+    PATCH_NOTES = "patchNotes",
+    BLOG_POSTS = "blogposts",
+  }
+
   const filterData = NEWS.filter((item) => {
-    if (tabParam === "latest" || tabParam === null) {
+    if (tabParam === TabParam.LATEST || tabParam === null) {
       return true;
-    } else if (tabParam === "announcements") {
-      return item.dataType === 3;
-    } else if (tabParam === "patchNotes") {
-      return item.dataType === 1;
+    } else if (tabParam === TabParam.ANNOUNCEMENTS) {
+      return item.dataType === NEWSTYPE[2];
+    } else if (tabParam === TabParam.PATCH_NOTES) {
+      return item.dataType === NEWSTYPE[0];
     } else {
-      return item.dataType === 2;
+      return item.dataType === NEWSTYPE[1];
     }
   });
 
