@@ -23,3 +23,33 @@
     text-transform: uppercase;
   }
 }
+
+.active-continue-btn {
+  display: flex;
+  width: 346px;
+  height: 60px;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: var(--color-primary-50);
+  cursor: pointer;
+
+  &:hover {
+    background: #ffc919;
+    transition: all 0.3s;
+  }
+
+  p {
+    color: white;
+    text-align: center;
+    font-family: var(--font-tungsten);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 373;
+    line-height: 16px; /* 80% */
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+}
