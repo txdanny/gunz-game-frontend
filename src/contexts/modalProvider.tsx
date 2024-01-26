@@ -1,5 +1,4 @@
 "use client";
-import { useLockedBody } from "@/hooks/useLockedBody";
 import { useSearchParams } from "next/navigation";
 import {
   createContext,

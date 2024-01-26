@@ -28,7 +28,7 @@ interface PageBgProps {
 export const PageWithBg: FC<PageBgProps> = ({ src, children }) => {
   return (
     <div
-      className="page-bg"
+      className={styles["page-bg"]}
       style={{
         backgroundImage: `url(${src})`,
       }}

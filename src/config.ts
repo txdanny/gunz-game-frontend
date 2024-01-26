@@ -92,7 +92,7 @@ export const NAV_LINKS_MOBILE: NavLink[] = [
     ],
   },
   {
-    title: "Boundty Shop",
+    title: "Bounty Shop",
     url: "#",
     submenu: [
       { title: "Event Items", url: "#" },
@@ -577,18 +577,18 @@ export const COMPETIVES: Competive[] = [
   },
 ];
 
-export const NEWSTYPE: string[] = [
-  "PATCH NOTES",
-  "BLOG POSTS",
-  "ANNOUNCEMENTS",
-];
+export enum NEWSTYPE {
+  PATCH_NOTES = "PATCH NOTES",
+  BLOG_POSTS = "BLOG POSTS",
+  ANNOUNCEMENTS = "ANNOUNCEMENTS",
+}
 
 export const NEWS: News[] = [
   {
     id: 0,
     imgUrl: "/images/news/1.png",
     date: "08/09/2023",
-    dataType: NEWSTYPE[0],
+    dataType: NEWSTYPE.PATCH_NOTES,
     title: "GUNZ Update Log #002",
     content: [
       "We're excited to share the details about the first big update that we have implemented for GunZ!",
@@ -599,7 +599,7 @@ export const NEWS: News[] = [
     id: 1,
     imgUrl: "/images/news/2.png",
     date: "08/09/2023",
-    dataType: NEWSTYPE[0],
+    dataType: NEWSTYPE.PATCH_NOTES,
     title: "Custom Discord Roles & More!",
     content: [
       "We've been continously working on making our Discord better, organizing channels, creating new content & more.",
@@ -609,7 +609,7 @@ export const NEWS: News[] = [
     id: 2,
     imgUrl: "/images/news/3.png",
     date: "08/09/2023",
-    dataType: NEWSTYPE[1],
+    dataType: NEWSTYPE.BLOG_POSTS,
     title: "A NEW ERA OF GUNZ: MESSAGE FROM GOSU",
     content: [
       "I am excited to announce a new chapter for GunZ, one that embraces a fresh start. In this regard, I have made the decision to implement a semi-clean slate approach.",
@@ -620,7 +620,7 @@ export const NEWS: News[] = [
     id: 3,
     imgUrl: "/images/news/4.png",
     date: "07/26/2023",
-    dataType: NEWSTYPE[1],
+    dataType: NEWSTYPE.BLOG_POSTS,
     title: "THE GLADIATOR COLLECTIVE TOURNAMENT: SERIES III",
     content: [
       "Will take place on August 23, 2023 12:00 AM EST, still open to registrations until August 1, 2023.",
@@ -631,7 +631,7 @@ export const NEWS: News[] = [
     id: 4,
     imgUrl: "/images/news/5.png",
     date: "07/26/2023",
-    dataType: NEWSTYPE[2],
+    dataType: NEWSTYPE.ANNOUNCEMENTS,
     title: "SERVER UNDER MAINTENANCE: 6 HOURS",
     content: [
       "Attention players!",
@@ -642,7 +642,7 @@ export const NEWS: News[] = [
     id: 5,
     imgUrl: "/images/news/6.png",
     date: "07/26/2023",
-    dataType: NEWSTYPE[2],
+    dataType: NEWSTYPE.ANNOUNCEMENTS,
     title: "DISCORD MAINTENANCE IN PROGRESS",
     content: [
       "Attention players!",
